@@ -11,6 +11,13 @@
     "test": "jest",
     "test-watch": "yarn test --watch --notify --coverage"
   },
+  "jest": {
+    "globals": {
+      "__APP__": {
+        "root": "edealer-estimator-test"
+      }
+    }
+  },
   "dependencies": {
     "autobind-decorator": "^2.1.0",
     "prop-types": "^15.6.1",
@@ -38,6 +45,8 @@
     "eslint-plugin-react": "^7.7.0",
     "file-loader": "^1.1.11",
     "jest": "^22.4.3",
+    "jest-styled-components": "^5.0.1",
+    "react-test-renderer": "^16.3.1",
     "rimraf": "^2.6.2",
     "webpack": "^4.4.1",
     "webpack-bundle-analyzer": "^2.11.1",
