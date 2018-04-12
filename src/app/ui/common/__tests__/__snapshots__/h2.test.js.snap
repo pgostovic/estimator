@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default 1`] = `
+#edealer-estimator-test .c0 {
+  color: #333333;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+<h1
+  className="c0"
+>
+  The Title
+</h1>
+`;
+
+exports[`noBottomMargin 1`] = `
+#edealer-estimator-test .c0 {
+  color: #333333;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+<h1
+  className="c0"
+>
+  The Title
+</h1>
+`;
+
+exports[`noTopMargin 1`] = `
+#edealer-estimator-test .c0 {
+  color: #333333;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+<h1
+  className="c0"
+>
+  The Title
+</h1>
+`;

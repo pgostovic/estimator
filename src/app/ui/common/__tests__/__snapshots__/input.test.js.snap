@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`text default 1`] = `
+#edealer-estimator-test .c0 {
+  position: relative;
+}
+
+#edealer-estimator-test .c0:after {
+  content: '';
+  position: absolute;
+  right: 18px;
+  top: 10px;
+  color: #c5c5c5;
+  font-size: 16px;
+}
+
+#edealer-estimator-test .c1 {
+  font-family: proxima nova;
+  display: block;
+  box-sizing: border-box;
+  height: 45px;
+  width: 100%;
+  color: #333333;
+  border: 2px solid #e0dfdf;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#edealer-estimator-test .c1::-webkit-input-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c1::-moz-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c1:-ms-input-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c1::placeholder {
+  color: #c5c5c5;
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    type="text"
+  />
+</div>
+`;
+
+exports[`text with suffix 1`] = `
+#edealer-estimator-test .c0 {
+  position: relative;
+}
+
+#edealer-estimator-test .c0:after {
+  content: 'Watts';
+  position: absolute;
+  right: 18px;
+  top: 10px;
+  color: #c5c5c5;
+  font-size: 16px;
+}
+
+#edealer-estimator-test .c1 {
+  font-family: proxima nova;
+  display: block;
+  box-sizing: border-box;
+  height: 45px;
+  width: 100%;
+  color: #333333;
+  border: 2px solid #e0dfdf;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-left: 20px;
+  padding-right: 45px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#edealer-estimator-test .c1::-webkit-input-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c1::-moz-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c1:-ms-input-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c1::placeholder {
+  color: #c5c5c5;
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    type="text"
+  />
+</div>
+`;
