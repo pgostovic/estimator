@@ -1,12 +1,15 @@
 import makeReducer from '../../../lib/redux-util/makeReducer';
-import { setIsOpenAction } from './actions';
+import { types } from './actions';
+
 
 const defaultState = {
   isOpen: false,
 };
 
+const { UI_SET_IS_OPEN } = types;
+
 export default makeReducer({
-  [setIsOpenAction().type]: (state, action) => (
+  [UI_SET_IS_OPEN]: (state, action) => (
     { ...state, isOpen: action.isOpen }
   ),
 }, defaultState);
