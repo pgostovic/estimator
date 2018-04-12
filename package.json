@@ -3,11 +3,13 @@
   "version": "0.1",
   "license": "UNLICENSED",
   "scripts": {
-    "clean": "rimraf dist",
-    "prebuild": "rimraf dist",
+    "clean": "rimraf dist coverage",
+    "prebuild": "rimraf dist coverage",
     "build": "webpack --config etc/webpack.js",
     "start": "webpack-dev-server --hot --config etc/webpack.js",
-    "analyze": "ANALYZE_BUNDLE=true webpack --config etc/webpack.js"
+    "analyze": "ANALYZE_BUNDLE=true webpack --config etc/webpack.js",
+    "test": "jest",
+    "test-watch": "yarn test --watch --notify --coverage"
   },
   "dependencies": {
     "autobind-decorator": "^2.1.0",
@@ -35,6 +37,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
     "file-loader": "^1.1.11",
+    "jest": "^22.4.3",
     "rimraf": "^2.6.2",
     "webpack": "^4.4.1",
     "webpack-bundle-analyzer": "^2.11.1",

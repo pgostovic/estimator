@@ -1,14 +1,17 @@
+const padHex = num => (`00${num.toString(16)}`).substr(-2);
+const isBadNum = (num, max) => (typeof num !== 'number' || num < 0 || num > max);
+
 export default class Color {
   constructor(...args) {
     if (args.length === 1 && typeof args[0] === 'string' && args[0].charAt(0) === '#') {
-      const comps3 = args[0].match(/^#([a-f0-9])([a-f0-9])([a-f0-9])$/);
+      const comps3 = args[0].match(/^#([a-f0-9])([a-f0-9])([a-f0-9])$/i);
       if (comps3) {
         this.r = parseInt(`${comps3[1]}${comps3[1]}`, 16);
         this.g = parseInt(`${comps3[2]}${comps3[2]}`, 16);
         this.b = parseInt(`${comps3[3]}${comps3[3]}`, 16);
         this.a = 1;
       } else {
-        const comps6 = args[0].match(/^#([a-f0-9]{2})([a-f0-9]{2})([a-f0-9]{2})$/);
+        const comps6 = args[0].match(/^#([a-f0-9]{2})([a-f0-9]{2})([a-f0-9]{2})$/i);
         if (comps6) {
           this.r = parseInt(comps6[1], 16);
           this.g = parseInt(comps6[2], 16);
@@ -27,6 +30,10 @@ export default class Color {
     } else {
       throw new Error('Invalid Color arguments: ', args.join(', '));
     }
+
+    if (isBadNum(this.r, 255) || isBadNum(this.g, 255) || isBadNum(this.b, 255) || isBadNum(this.a, 1)) {
+      throw new Error('Invalid Color arguments: ', args.join(', '));
+    }
   }
 
   alpha(alpha) {
@@ -42,7 +49,7 @@ export default class Color {
     } = this;
 
     if (a === 1) {
-      return `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
+      return `#${padHex(r)}${padHex(g)}${padHex(b)}`;
     }
     return `rgba(${r}, ${g}, ${b}, ${a})`;
   }

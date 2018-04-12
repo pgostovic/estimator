@@ -15,5 +15,9 @@
     "__APP__": true,
     "fetch": true,
     "window": true
+  },
+
+  "env": {
+    "jest": true
   }
 }
