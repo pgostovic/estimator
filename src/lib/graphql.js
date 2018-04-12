@@ -1,4 +1,9 @@
-
+/**
+ * @param {String} query graphql query
+ * @param {Object} variables graphql query variables
+ *
+ * @returns {Promise} graphql response
+ */
 export default (query, variables) => (
   fetch(__APP__.graphql, {
     method: 'POST',

@@ -10,7 +10,7 @@ import Store from './store';
 import { Router, Route } from '../lib/router';
 import { setIsOpenAction } from './store/ui/actions';
 
-import { getNow } from './data/system'; // Just tesing the graphql...
+import { getNow } from './data/system'; // Just testing the graphql...
 
 import './index.html';
 
