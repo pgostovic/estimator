@@ -1,0 +1,19 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+
+  "rules": {
+    "no-underscore-dangle": "off",
+    "arrow-parens": "off",
+    "react/jsx-filename-extension": "off",
+    "import/prefer-default-export": "off",
+    "max-len": "off",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+  },
+
+  "globals": {
+    "__APP__": true,
+    "fetch": true,
+    "window": true
+  }
+}

@@ -1,0 +1,49 @@
+export default class Color {
+  constructor(...args) {
+    if (args.length === 1 && typeof args[0] === 'string' && args[0].charAt(0) === '#') {
+      const comps3 = args[0].match(/^#([a-f0-9])([a-f0-9])([a-f0-9])$/);
+      if (comps3) {
+        this.r = parseInt(`${comps3[1]}${comps3[1]}`, 16);
+        this.g = parseInt(`${comps3[2]}${comps3[2]}`, 16);
+        this.b = parseInt(`${comps3[3]}${comps3[3]}`, 16);
+        this.a = 1;
+      } else {
+        const comps6 = args[0].match(/^#([a-f0-9]{2})([a-f0-9]{2})([a-f0-9]{2})$/);
+        if (comps6) {
+          this.r = parseInt(comps6[1], 16);
+          this.g = parseInt(comps6[2], 16);
+          this.b = parseInt(comps6[3], 16);
+          this.a = 1;
+        } else {
+          throw new Error('Invalid Color arguments: ', args.join(', '));
+        }
+      }
+    } else if (args.length === 3 || args.length === 4) {
+      const [r, g, b, a] = args;
+      this.r = r;
+      this.g = g;
+      this.b = b;
+      this.a = a || 1;
+    } else {
+      throw new Error('Invalid Color arguments: ', args.join(', '));
+    }
+  }
+
+  alpha(alpha) {
+    const {
+      r, g, b,
+    } = this;
+    return new Color(r, g, b, alpha);
+  }
+
+  toString() {
+    const {
+      r, g, b, a,
+    } = this;
+
+    if (a === 1) {
+      return `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
+    }
+    return `rgba(${r}, ${g}, ${b}, ${a})`;
+  }
+}
