@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot default 1`] = `
+#edealer-estimator-test .c0 {
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+<p
+  className="c0"
+>
+  Some text...
+</p>
+`;
+
+exports[`snapshot noBottomMargin 1`] = `
+#edealer-estimator-test .c0 {
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+<p
+  className="c0"
+>
+  Some text...
+</p>
+`;
+
+exports[`snapshot noTopMargin 1`] = `
+#edealer-estimator-test .c0 {
+  padding: 0;
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+<p
+  className="c0"
+>
+  Some text...
+</p>
+`;
