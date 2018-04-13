@@ -3,21 +3,21 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import Button from '../button';
 
-test('no theme', () => {
+test('snapshot no theme', () => {
   const jsx = (
     <Button>Click Me</Button>
   );
   expect(renderer.create(jsx).toJSON()).toMatchSnapshot();
 });
 
-test('green', () => {
+test('snapshot green', () => {
   const jsx = (
     <Button theme="green">Click Me</Button>
   );
   expect(renderer.create(jsx).toJSON()).toMatchSnapshot();
 });
 
-test('orange-gradient', () => {
+test('snapshot orange-gradient', () => {
   const jsx = (
     <Button theme="orange-gradient">Click Me</Button>
   );

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`default 1`] = `
+exports[`snapshot default 1`] = `
 #edealer-estimator-test .c0 {
   color: #333333;
   font-size: 18px;
@@ -18,7 +18,7 @@ exports[`default 1`] = `
 </h1>
 `;
 
-exports[`noBottomMargin 1`] = `
+exports[`snapshot noBottomMargin 1`] = `
 #edealer-estimator-test .c0 {
   color: #333333;
   font-size: 18px;
@@ -36,7 +36,7 @@ exports[`noBottomMargin 1`] = `
 </h1>
 `;
 
-exports[`noTopMargin 1`] = `
+exports[`snapshot noTopMargin 1`] = `
 #edealer-estimator-test .c0 {
   color: #333333;
   font-size: 18px;

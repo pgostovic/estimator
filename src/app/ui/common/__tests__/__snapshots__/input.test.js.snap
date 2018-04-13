@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`text default 1`] = `
+exports[`snapshot text default 1`] = `
 #edealer-estimator-test .c0 {
   position: relative;
 }
@@ -58,7 +58,7 @@ exports[`text default 1`] = `
 </div>
 `;
 
-exports[`text with suffix 1`] = `
+exports[`snapshot text with suffix 1`] = `
 #edealer-estimator-test .c0 {
   position: relative;
 }

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`green 1`] = `
+exports[`snapshot green 1`] = `
 #edealer-estimator-test .c0 {
   font-family: proxima nova;
   display: block;
@@ -33,7 +33,7 @@ exports[`green 1`] = `
 </button>
 `;
 
-exports[`no theme 1`] = `
+exports[`snapshot no theme 1`] = `
 #edealer-estimator-test .c0 {
   font-family: proxima nova;
   display: block;
@@ -66,7 +66,7 @@ exports[`no theme 1`] = `
 </button>
 `;
 
-exports[`orange-gradient 1`] = `
+exports[`snapshot orange-gradient 1`] = `
 #edealer-estimator-test .c0 {
   font-family: proxima nova;
   display: block;
