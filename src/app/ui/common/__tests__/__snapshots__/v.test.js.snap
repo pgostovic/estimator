@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot default 1`] = `
+#edealer-estimator-test .c0 {
+  height: 10px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`snapshot px of 20 1`] = `
+#edealer-estimator-test .c0 {
+  height: 20px;
+}
+
+<div
+  className="c0"
+/>
+`;
