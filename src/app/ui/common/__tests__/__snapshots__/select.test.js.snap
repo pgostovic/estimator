@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot default 1`] = `
+#edealer-estimator-test .c0 {
+  position: relative;
+}
+
+#edealer-estimator-test .c0:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid #e0dfdf;
+  border-bottom: 2px solid #e0dfdf;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+}
+
+#edealer-estimator-test .c1 {
+  font-family: proxima nova;
+  display: block;
+  box-sizing: border-box;
+  height: 45px;
+  width: 100%;
+  border: 2px solid #e0dfdf;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-left: 20px;
+  padding-right: 30px;
+  color: #333333;
+  background-color: transparent;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+#edealer-estimator-test .c1:disabled {
+  cursor: not-allowed;
+}
+
+#edealer-estimator-test .c1.placeholder {
+  color: #c5c5c5;
+}
+
+<div
+  className="c0"
+>
+  <select
+    className="c1"
+    defaultValue={undefined}
+    disabled={false}
+    onChange={[Function]}
+    placeholder={null}
+    value={undefined}
+  >
+    <option>
+      One
+    </option>
+    <option>
+      Two
+    </option>
+    <option>
+      Three
+    </option>
+  </select>
+</div>
+`;

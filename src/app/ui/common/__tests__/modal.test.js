@@ -1,20 +1,16 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Adapter from 'enzyme-adapter-react-16';
 import { mount, configure } from 'enzyme';
-import 'jest-styled-components';
+import { snap } from '../../../../lib/test-utils';
 import Modal from '../modal';
 
 configure({ adapter: new Adapter() });
 
-test('snapshot default', () => {
-  const jsx = (
-    <Modal>
-      <div>Some stuff</div>
-    </Modal>
-  );
-  expect(renderer.create(jsx).toJSON()).toMatchSnapshot();
-});
+snap('snapshot default', (
+  <Modal>
+    <div>Some stuff</div>
+  </Modal>
+));
 
 test('onClose called when background clicked', () => {
   const onClose = jest.fn();

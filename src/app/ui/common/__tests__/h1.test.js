@@ -1,25 +1,15 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import 'jest-styled-components';
+import { snap } from '../../../../lib/test-utils';
 import H1 from '../h1';
 
-test('snapshot default', () => {
-  const jsx = (
-    <H1>The Title</H1>
-  );
-  expect(renderer.create(jsx).toJSON()).toMatchSnapshot();
-});
+snap('snapshot default', (
+  <H1>The Title</H1>
+));
 
-test('snapshot noTopMargin', () => {
-  const jsx = (
-    <H1 noTopMargin>The Title</H1>
-  );
-  expect(renderer.create(jsx).toJSON()).toMatchSnapshot();
-});
+snap('snapshot noTopMargin', (
+  <H1 noTopMargin>The Title</H1>
+));
 
-test('snapshot noBottomMargin', () => {
-  const jsx = (
-    <H1 noBottomMargin>The Title</H1>
-  );
-  expect(renderer.create(jsx).toJSON()).toMatchSnapshot();
-});
+snap('snapshot noBottomMargin', (
+  <H1 noBottomMargin>The Title</H1>
+));

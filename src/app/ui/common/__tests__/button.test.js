@@ -1,25 +1,15 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import 'jest-styled-components';
+import { snap } from '../../../../lib/test-utils';
 import Button from '../button';
 
-test('snapshot no theme', () => {
-  const jsx = (
-    <Button>Click Me</Button>
-  );
-  expect(renderer.create(jsx).toJSON()).toMatchSnapshot();
-});
+snap('snapshot no theme', (
+  <Button>Click Me</Button>
+));
 
-test('snapshot green', () => {
-  const jsx = (
-    <Button theme="green">Click Me</Button>
-  );
-  expect(renderer.create(jsx).toJSON()).toMatchSnapshot();
-});
+snap('snapshot green', (
+  <Button theme="green">Click Me</Button>
+));
 
-test('snapshot orange-gradient', () => {
-  const jsx = (
-    <Button theme="orange-gradient">Click Me</Button>
-  );
-  expect(renderer.create(jsx).toJSON()).toMatchSnapshot();
-});
+snap('snapshot orange-gradient', (
+  <Button theme="orange-gradient">Click Me</Button>
+));

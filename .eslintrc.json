@@ -8,7 +8,8 @@
     "react/jsx-filename-extension": "off",
     "import/prefer-default-export": "off",
     "max-len": "off",
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "function-paren-newline": ["error", "consistent"]
   },
 
   "globals": {
