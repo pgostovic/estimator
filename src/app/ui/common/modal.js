@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import autobind from 'autobind-decorator';
 import styled from '../../../lib/styled';
 
 import { colorDarkBlack, colorWhite, colorGrey, fontWeightThin } from '../style/variables';
@@ -41,22 +42,45 @@ const CloseButton = styled.button`
   cursor: pointer;
 `;
 
-const Modal = ({ children, onClose }) => (
-  <Background onClick={e => onClose && e.target === e.currentTarget && onClose(e)}>
-    <Foreground>
-      {children}
-      {onClose && <CloseButton onClick={onClose}>&times;</CloseButton>}
-    </Foreground>
-  </Background>
-);
+class Modal extends React.Component {
+  static propTypes = {
+    children: PropTypes.node.isRequired,
+    onClose: PropTypes.func,
+  };
 
-Modal.propTypes = {
-  children: PropTypes.node.isRequired,
-  onClose: PropTypes.func,
-};
+  static defaultProps = {
+    onClose: null,
+  };
 
-Modal.defaultProps = {
-  onClose: null,
-};
+  componentDidMount() {
+    window.document.addEventListener('keydown', this.onKeyDown);
+  }
+
+  componentWillUnmount() {
+    window.document.removeEventListener('keydown', this.onKeyDown);
+  }
+
+  @autobind
+  onKeyDown(event) {
+    const { onClose } = this.props;
+
+    if (event.keyCode === 27) {
+      onClose();
+    }
+  }
+
+  render() {
+    const { children, onClose } = this.props;
+
+    return (
+      <Background onClick={e => onClose && e.target === e.currentTarget && onClose(e)}>
+        <Foreground>
+          {children}
+          {onClose && <CloseButton onClick={onClose}>&times;</CloseButton>}
+        </Foreground>
+      </Background>
+    );
+  }
+}
 
 export default Modal;
