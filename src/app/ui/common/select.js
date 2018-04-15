@@ -55,38 +55,51 @@ const SelectInner = styled.select`
   }
 `;
 
+class Select extends React.Component {
+  static propTypes = {
+    children: PropTypes.node,
+    placeholder: PropTypes.string,
+    value: PropTypes.string,
+    onChange: PropTypes.func,
+  };
 
-const Select = props => {
-  const { placeholder, children, value } = props;
-  const showPlaceholder = !!placeholder && !value;
+  static defaultProps = {
+    children: null,
+    placeholder: null,
+    value: undefined,
+    onChange: () => {},
+  };
 
-  return (
-    <SelectOuter>
-      <SelectInner
-        disabled={!children}
-        className={showPlaceholder && 'placeholder'}
-        defaultValue={showPlaceholder ? 'select-ph' : undefined}
-        {...props}
-      >
-        {showPlaceholder && <option disabled value="select-ph">{placeholder}</option>}
-        {children}
-      </SelectInner>
-    </SelectOuter>
-  );
-};
+  constructor(props) {
+    super(props);
 
-Select.propTypes = {
-  children: PropTypes.node,
-  placeholder: PropTypes.string,
-  value: PropTypes.string,
-  onChange: PropTypes.func,
-};
+    const { placeholder, value } = props;
 
-Select.defaultProps = {
-  children: null,
-  placeholder: null,
-  value: undefined,
-  onChange: () => {},
-};
+    this.state = { showPlaceholder: !!placeholder && !value };
+  }
+
+  render() {
+    const { placeholder, children, onChange } = this.props;
+    const { showPlaceholder } = this.state;
+
+    return (
+      <SelectOuter>
+        <SelectInner
+          disabled={!children}
+          className={showPlaceholder && 'placeholder'}
+          defaultValue={showPlaceholder ? 'select-ph' : undefined}
+          {...this.props}
+          onChange={event => {
+            this.setState({ showPlaceholder: false });
+            return onChange(event);
+          }}
+        >
+          {showPlaceholder && <option disabled className="ph" value="select-ph">{placeholder}</option>}
+          {children}
+        </SelectInner>
+      </SelectOuter>
+    );
+  }
+}
 
 export default Select;
