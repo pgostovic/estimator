@@ -11,7 +11,7 @@ const Frame = styled.div`
   display: flex;
   flex-direction: row;
   width: 920px;
-  height: 100%;
+  min-height: 100%;
 `;
 
 export default class View extends React.Component {

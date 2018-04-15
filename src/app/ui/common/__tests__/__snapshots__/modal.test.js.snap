@@ -27,7 +27,7 @@ exports[`snapshot default 1`] = `
   background-color: #ffffff;
   padding: 0;
   height: 100vh;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 <div

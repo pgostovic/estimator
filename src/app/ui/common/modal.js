@@ -22,7 +22,7 @@ const Foreground = styled.div`
   background-color: ${colorWhite};
   padding: 0;
   height: 100vh;
-  overflow: hidden;
+  overflow-y: auto;
 `;
 
 const CloseButton = styled.button`
