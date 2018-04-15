@@ -1,5 +1,4 @@
 import styled, { injectGlobal } from '../../../lib/styled';
-import reset from './reset';
 
 import {
   fontDefault,
@@ -17,7 +16,7 @@ import proximaNovaBold from '../static/fonts/ProximaNova-Bold.otf';
 import proximaNovaSemibold from '../static/fonts/ProximaNova-Semibold.otf';
 import proximaNovaExtrabold from '../static/fonts/ProximaNova-Extrabold.otf';
 
-export const fonts = injectGlobal`
+injectGlobal`
   @font-face {
     font-family: ${fontDefault};
     src: url(${proximaNovaThin}) format('opentype');
@@ -51,10 +50,6 @@ export const fonts = injectGlobal`
     src: url(${proximaNovaExtrabold}) format('opentype');
     font-weight: ${fontWeightExtraBold};
     font-style: normal;
-  }
-
-  #${__APP__.root} {
-    ${reset}
   }
 `;
 

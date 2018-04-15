@@ -9,7 +9,8 @@
     "import/prefer-default-export": "off",
     "max-len": "off",
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
-    "function-paren-newline": ["error", "consistent"]
+    "function-paren-newline": ["error", "consistent"],
+    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }]
   },
 
   "globals": {
