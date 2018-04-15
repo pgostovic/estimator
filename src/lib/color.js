@@ -1,3 +1,25 @@
+/**
+ * Utility for expressing colours in a consistent way while not having to
+ * worry about conversions between hex and rgb. To toString() function
+ * is useful for embedding instances in string templates -- i.e. when using
+ * StyledComponents. The output will generate an html hex colour value by
+ * default, but will switch to rgba() if a non-1 alpha channel is set.
+ *
+ * Example of use in styled component:
+ *
+ *    const red = new Color('#f00);
+ *
+ *    const RedLabel = styled.label`
+ *      color: ${red};
+ *      background-color: ${red.alpha(0.5)};
+ *    `;
+ *
+ * In this case the generated CSS attributes would be:
+ *
+ *    color: #ff0000;
+ *    background-color: rgba(255, 0, 0, 0.5);
+ */
+
 const padHex = num => (`00${num.toString(16)}`).substr(-2);
 const isBadNum = (num, max) => (typeof num !== 'number' || num < 0 || num > max);
 
