@@ -1,0 +1,389 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot default 1`] = `
+#edealer-estimator-test .c1 {
+  color: #333333;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+#edealer-estimator-test .c2 {
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#edealer-estimator-test .c4 {
+  position: relative;
+}
+
+#edealer-estimator-test .c4:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid #e0dfdf;
+  border-bottom: 2px solid #e0dfdf;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+}
+
+#edealer-estimator-test .c5 {
+  font-family: proxima nova;
+  display: block;
+  box-sizing: border-box;
+  height: 45px;
+  width: 100%;
+  border: 2px solid #e0dfdf;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-left: 20px;
+  padding-right: 30px;
+  color: #333333;
+  background-color: transparent;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+#edealer-estimator-test .c5:disabled {
+  cursor: not-allowed;
+}
+
+#edealer-estimator-test .c5.placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c6 {
+  position: relative;
+}
+
+#edealer-estimator-test .c6:after {
+  content: 'KM';
+  position: absolute;
+  right: 18px;
+  top: 10px;
+  color: #c5c5c5;
+  font-size: 16px;
+}
+
+#edealer-estimator-test .c8 {
+  position: relative;
+}
+
+#edealer-estimator-test .c8:after {
+  content: '';
+  position: absolute;
+  right: 18px;
+  top: 10px;
+  color: #c5c5c5;
+  font-size: 16px;
+}
+
+#edealer-estimator-test .c7 {
+  font-family: proxima nova;
+  display: block;
+  box-sizing: border-box;
+  height: 45px;
+  width: 100%;
+  color: #333333;
+  border: 2px solid #e0dfdf;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-left: 20px;
+  padding-right: 45px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#edealer-estimator-test .c7::-webkit-input-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c7::-moz-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c7:-ms-input-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c7::placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c9 {
+  font-family: proxima nova;
+  display: block;
+  box-sizing: border-box;
+  height: 45px;
+  width: 100%;
+  color: #333333;
+  border: 2px solid #e0dfdf;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#edealer-estimator-test .c9::-webkit-input-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c9::-moz-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c9:-ms-input-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c9::placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c10 {
+  font-family: proxima nova;
+  display: block;
+  box-sizing: border-box;
+  height: 45px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  background: #6bbd7d;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 2px;
+  -moz-letter-spacing: 2px;
+  -ms-letter-spacing: 2px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  outline: 0;
+}
+
+#edealer-estimator-test .c10:active {
+  box-shadow: inset 0 0 10px rgba(51,51,51,0.5);
+}
+
+#edealer-estimator-test .c3 {
+  height: 10px;
+}
+
+#edealer-estimator-test .c0 {
+  width: 265px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(51,51,51,0.1);
+  z-index: 5;
+}
+
+<form
+  className="c0"
+>
+  <h1
+    className="c1"
+  >
+    What’s my car worth?
+  </h1>
+  <p
+    className="c2"
+  >
+    Receive a close estimate of your trade value using real Canadian auction data.
+  </p>
+  <div
+    className="c3"
+  />
+  <div
+    className="c4"
+  >
+    <select
+      className="placeholder c5"
+      defaultValue="select-ph"
+      disabled={false}
+      name="year"
+      onChange={[Function]}
+      placeholder="Year"
+      value={undefined}
+    >
+      <option
+        className="ph"
+        disabled={true}
+        value="select-ph"
+      >
+        Year
+      </option>
+      <option>
+        2018
+      </option>
+      <option>
+        2017
+      </option>
+      <option>
+        2016
+      </option>
+      <option>
+        2015
+      </option>
+    </select>
+  </div>
+  <div
+    className="c4"
+  >
+    <select
+      className="placeholder c5"
+      defaultValue="select-ph"
+      disabled={false}
+      name="make"
+      onChange={[Function]}
+      placeholder="Make"
+      value={undefined}
+    >
+      <option
+        className="ph"
+        disabled={true}
+        value="select-ph"
+      >
+        Make
+      </option>
+      <option>
+        Acura
+      </option>
+      <option>
+        Volvo
+      </option>
+      <option>
+        Honda
+      </option>
+    </select>
+  </div>
+  <div
+    className="c4"
+  >
+    <select
+      className="placeholder c5"
+      defaultValue="select-ph"
+      disabled={false}
+      name="model"
+      onChange={[Function]}
+      placeholder="Model"
+      value={undefined}
+    >
+      <option
+        className="ph"
+        disabled={true}
+        value="select-ph"
+      >
+        Model
+      </option>
+      <option>
+        XC90
+      </option>
+    </select>
+  </div>
+  <div
+    className="c4"
+  >
+    <select
+      className="placeholder c5"
+      defaultValue="select-ph"
+      disabled={false}
+      name="trim"
+      onChange={[Function]}
+      placeholder="Trim"
+      value={undefined}
+    >
+      <option
+        className="ph"
+        disabled={true}
+        value="select-ph"
+      >
+        Trim
+      </option>
+      <option>
+        Some Trim
+      </option>
+    </select>
+  </div>
+  <div
+    className="c6"
+  >
+    <input
+      className="c7"
+      min="0"
+      name="mileage"
+      onChange={[Function]}
+      placeholder="Mileage"
+      type="number"
+      value=""
+    />
+  </div>
+  <div
+    className="c3"
+  />
+  <div
+    className="c8"
+  >
+    <input
+      autoComplete="name"
+      className="c9"
+      name="name"
+      onChange={[Function]}
+      placeholder="Full Name"
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="c8"
+  >
+    <input
+      autoComplete="email"
+      className="c9"
+      name="email"
+      onChange={[Function]}
+      placeholder="Email"
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="c8"
+  >
+    <input
+      autoComplete="tel tel-national"
+      className="c9"
+      name="phone"
+      onChange={[Function]}
+      placeholder="Phone Number"
+      type="tel"
+      value=""
+    />
+  </div>
+  <button
+    className="c10"
+  >
+    Calculate
+  </button>
+</form>
+`;

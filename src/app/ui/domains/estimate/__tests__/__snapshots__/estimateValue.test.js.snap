@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot default 1`] = `
+#edealer-estimator-test .c0 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: #ffffff;
+  padding: 18px 30px;
+  margin-left: 25px;
+  border-radius: 5px;
+  box-shadow: 0 0 12px 0 rgba(0,0,0,0.05);
+}
+
+#edealer-estimator-test .c0:first-child {
+  margin-left: 0;
+}
+
+#edealer-estimator-test .c1 {
+  color: #dedede;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+#edealer-estimator-test .c2 {
+  color: #6bbd7d;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 53px;
+}
+
+<div
+  className="c0"
+>
+  <label
+    className="c1"
+  >
+    Some Title
+  </label>
+  <div
+    className="c2"
+  >
+    $123
+  </div>
+</div>
+`;

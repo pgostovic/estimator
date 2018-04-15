@@ -1,0 +1,605 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot default 1`] = `
+#edealer-estimator-test .c0 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+}
+
+#edealer-estimator-test .c1 {
+  position: relative;
+  background-color: #ffffff;
+  padding: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+#edealer-estimator-test .c23 {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  border: none;
+  background-color: transparent;
+  color: #c5c5c5;
+  font-size: 46px;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  font-weight: 200;
+  outline: 0;
+  cursor: pointer;
+}
+
+#edealer-estimator-test .c4 {
+  color: #333333;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+#edealer-estimator-test .c20 {
+  color: #333333;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#edealer-estimator-test .c5 {
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#edealer-estimator-test .c7 {
+  position: relative;
+}
+
+#edealer-estimator-test .c7:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid #e0dfdf;
+  border-bottom: 2px solid #e0dfdf;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+}
+
+#edealer-estimator-test .c8 {
+  font-family: proxima nova;
+  display: block;
+  box-sizing: border-box;
+  height: 45px;
+  width: 100%;
+  border: 2px solid #e0dfdf;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-left: 20px;
+  padding-right: 30px;
+  color: #333333;
+  background-color: transparent;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+#edealer-estimator-test .c8:disabled {
+  cursor: not-allowed;
+}
+
+#edealer-estimator-test .c8.placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c9 {
+  position: relative;
+}
+
+#edealer-estimator-test .c9:after {
+  content: 'KM';
+  position: absolute;
+  right: 18px;
+  top: 10px;
+  color: #c5c5c5;
+  font-size: 16px;
+}
+
+#edealer-estimator-test .c11 {
+  position: relative;
+}
+
+#edealer-estimator-test .c11:after {
+  content: '';
+  position: absolute;
+  right: 18px;
+  top: 10px;
+  color: #c5c5c5;
+  font-size: 16px;
+}
+
+#edealer-estimator-test .c10 {
+  font-family: proxima nova;
+  display: block;
+  box-sizing: border-box;
+  height: 45px;
+  width: 100%;
+  color: #333333;
+  border: 2px solid #e0dfdf;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-left: 20px;
+  padding-right: 45px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#edealer-estimator-test .c10::-webkit-input-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c10::-moz-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c10:-ms-input-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c10::placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c12 {
+  font-family: proxima nova;
+  display: block;
+  box-sizing: border-box;
+  height: 45px;
+  width: 100%;
+  color: #333333;
+  border: 2px solid #e0dfdf;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#edealer-estimator-test .c12::-webkit-input-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c12::-moz-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c12:-ms-input-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c12::placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c13 {
+  font-family: proxima nova;
+  display: block;
+  box-sizing: border-box;
+  height: 45px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  background: #6bbd7d;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 2px;
+  -moz-letter-spacing: 2px;
+  -ms-letter-spacing: 2px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  outline: 0;
+}
+
+#edealer-estimator-test .c13:active {
+  box-shadow: inset 0 0 10px rgba(51,51,51,0.5);
+}
+
+#edealer-estimator-test .c6 {
+  height: 10px;
+}
+
+#edealer-estimator-test .c15 {
+  height: 15px;
+}
+
+#edealer-estimator-test .c21 {
+  height: 5px;
+}
+
+#edealer-estimator-test .c3 {
+  width: 265px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(51,51,51,0.1);
+  z-index: 5;
+}
+
+#edealer-estimator-test .c22 {
+  color: #333333;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#edealer-estimator-test .c17 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: #ffffff;
+  padding: 18px 30px;
+  margin-left: 25px;
+  border-radius: 5px;
+  box-shadow: 0 0 12px 0 rgba(0,0,0,0.05);
+}
+
+#edealer-estimator-test .c17:first-child {
+  margin-left: 0;
+}
+
+#edealer-estimator-test .c18 {
+  color: #dedede;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+#edealer-estimator-test .c19 {
+  color: #6bbd7d;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 53px;
+}
+
+#edealer-estimator-test .c14 {
+  background-color: #fbfbfb;
+  padding: 30px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+#edealer-estimator-test .c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+#edealer-estimator-test .c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 920px;
+  min-height: 100%;
+}
+
+<div
+  className="c0"
+  onClick={[Function]}
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <form
+        className="c3"
+      >
+        <h1
+          className="c4"
+        >
+          What’s my car worth?
+        </h1>
+        <p
+          className="c5"
+        >
+          Receive a close estimate of your trade value using real Canadian auction data.
+        </p>
+        <div
+          className="c6"
+        />
+        <div
+          className="c7"
+        >
+          <select
+            className="placeholder c8"
+            defaultValue="select-ph"
+            disabled={false}
+            name="year"
+            onChange={[Function]}
+            placeholder="Year"
+            value={undefined}
+          >
+            <option
+              className="ph"
+              disabled={true}
+              value="select-ph"
+            >
+              Year
+            </option>
+            <option>
+              2018
+            </option>
+            <option>
+              2017
+            </option>
+            <option>
+              2016
+            </option>
+            <option>
+              2015
+            </option>
+          </select>
+        </div>
+        <div
+          className="c7"
+        >
+          <select
+            className="placeholder c8"
+            defaultValue="select-ph"
+            disabled={false}
+            name="make"
+            onChange={[Function]}
+            placeholder="Make"
+            value={undefined}
+          >
+            <option
+              className="ph"
+              disabled={true}
+              value="select-ph"
+            >
+              Make
+            </option>
+            <option>
+              Acura
+            </option>
+            <option>
+              Volvo
+            </option>
+            <option>
+              Honda
+            </option>
+          </select>
+        </div>
+        <div
+          className="c7"
+        >
+          <select
+            className="placeholder c8"
+            defaultValue="select-ph"
+            disabled={false}
+            name="model"
+            onChange={[Function]}
+            placeholder="Model"
+            value={undefined}
+          >
+            <option
+              className="ph"
+              disabled={true}
+              value="select-ph"
+            >
+              Model
+            </option>
+            <option>
+              XC90
+            </option>
+          </select>
+        </div>
+        <div
+          className="c7"
+        >
+          <select
+            className="placeholder c8"
+            defaultValue="select-ph"
+            disabled={false}
+            name="trim"
+            onChange={[Function]}
+            placeholder="Trim"
+            value={undefined}
+          >
+            <option
+              className="ph"
+              disabled={true}
+              value="select-ph"
+            >
+              Trim
+            </option>
+            <option>
+              Some Trim
+            </option>
+          </select>
+        </div>
+        <div
+          className="c9"
+        >
+          <input
+            className="c10"
+            min="0"
+            name="mileage"
+            onChange={[Function]}
+            placeholder="Mileage"
+            type="number"
+            value=""
+          />
+        </div>
+        <div
+          className="c6"
+        />
+        <div
+          className="c11"
+        >
+          <input
+            autoComplete="name"
+            className="c12"
+            name="name"
+            onChange={[Function]}
+            placeholder="Full Name"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          className="c11"
+        >
+          <input
+            autoComplete="email"
+            className="c12"
+            name="email"
+            onChange={[Function]}
+            placeholder="Email"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          className="c11"
+        >
+          <input
+            autoComplete="tel tel-national"
+            className="c12"
+            name="phone"
+            onChange={[Function]}
+            placeholder="Phone Number"
+            type="tel"
+            value=""
+          />
+        </div>
+        <button
+          className="c13"
+        >
+          Calculate
+        </button>
+      </form>
+      <div
+        className="c14"
+      >
+        <h1
+          className="c4"
+        >
+          Quick Estimate
+        </h1>
+        <div
+          className="c15"
+        />
+        <div
+          className="c16"
+        >
+          <div
+            className="c17"
+          >
+            <label
+              className="c18"
+            >
+              Low Estimate
+            </label>
+            <div
+              className="c19"
+            >
+              $15,000
+            </div>
+          </div>
+          <div
+            className="c17"
+          >
+            <label
+              className="c18"
+            >
+              High Estimate
+            </label>
+            <div
+              className="c19"
+            >
+              $18,000
+            </div>
+          </div>
+        </div>
+        <div
+          className="c15"
+        />
+        <h1
+          className="c20"
+        >
+          Guaranteed Trade Value
+        </h1>
+        <p
+          className="c5"
+        >
+          Most customers want to know exactly what their trade is worth and we are prepared to give you a guaranteed trade value online! It only takes a few minutes to capture your vehicle information using our app. Get started now or watch the 15 second video to learn more!
+        </p>
+        <div
+          className="c21"
+        />
+        <h1
+          className="c22"
+        >
+          Learn why 74% of customers choose a Guaranteed Trade Value.
+        </h1>
+      </div>
+    </div>
+    <button
+      className="c23"
+      onClick={[MockFunction]}
+    >
+      ×
+    </button>
+  </div>
+</div>
+`;
