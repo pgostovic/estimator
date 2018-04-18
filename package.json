@@ -18,7 +18,9 @@
   },
   "dependencies": {
     "autobind-decorator": "^2.1.0",
+    "core-js": "^2.5.5",
     "prop-types": "^15.6.1",
+    "raf": "^3.4.0",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "react-hot-loader": "^4.0.1",
