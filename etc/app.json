@@ -2,17 +2,17 @@
   "development": {
     "mode": "development",
     "root": "edealer-estimator-development",
-    "graphql": "https://graph-stage.eblock.ca/graphql",
+    "graphql": "http://graph.stg.getedealer.com/graphql",
     "devtool": "eval-source-map"
   },
   "stage": {
     "mode": "development",
     "root": "edealer-estimator-stage",
-    "graphql": "https://graph-stage.eblock.ca/graphql"
+    "graphql": "http://graph.stg.getedealer.com/graphql"
   },
   "production": {
     "mode": "production",
     "root": "edealer-estimator-production",
-    "graphql": "https://graph.eblock.ca/graphql"
+    "graphql": "https://graph.getedealer.com/graphql"
   }
 }

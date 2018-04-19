@@ -14,23 +14,17 @@ const Frame = styled.div`
   min-height: 100%;
 `;
 
-export default class View extends React.Component {
-  static propTypes = {
-    onClose: PropTypes.func.isRequired,
-    onQueryChange: PropTypes.func.isRequired,
-    query: PropTypes.objectOf(PropTypes.string).isRequired,
-  };
+const View = props => (
+  <Modal onClose={props.onClose}>
+    <Frame>
+      <Query {...props} />
+      <Details />
+    </Frame>
+  </Modal>
+);
 
-  render() {
-    const { onClose, onQueryChange, query } = this.props;
+View.propTypes = {
+  onClose: PropTypes.func.isRequired,
+};
 
-    return (
-      <Modal onClose={onClose}>
-        <Frame>
-          <Query onChange={onQueryChange} query={query} />
-          <Details />
-        </Frame>
-      </Modal>
-    );
-  }
-}
+export default View;

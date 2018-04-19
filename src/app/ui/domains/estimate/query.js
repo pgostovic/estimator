@@ -12,22 +12,33 @@ import V from '../../common/v';
 import { paddingFrame, colorBlack } from '../../style/variables';
 
 
+const nextYear = new Date().getFullYear() + 1;
+const pastHundredYears = [...Array(100).keys()].map(i => nextYear - i);
+
 export default class Query extends React.Component {
   static propTypes = {
-    onChange: PropTypes.func.isRequired,
+    onQueryChange: PropTypes.func.isRequired,
     query: PropTypes.objectOf(PropTypes.string).isRequired,
+    makes: PropTypes.arrayOf(PropTypes.string).isRequired,
+    models: PropTypes.arrayOf(PropTypes.string).isRequired,
+    subModels: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   @autobind
   onChange(event) {
-    const { onChange } = this.props;
+    const { onQueryChange } = this.props;
     const { name, value } = event.target;
 
-    onChange(name, value);
+    onQueryChange(name, value);
   }
 
   render() {
-    const { query } = this.props;
+    const {
+      query,
+      makes,
+      models,
+      subModels,
+    } = this.props;
 
     return (
       <Form>
@@ -37,21 +48,16 @@ export default class Query extends React.Component {
         </P>
         <V />
         <Select name="year" placeholder="Year" onChange={this.onChange} value={query.year}>
-          <option>2018</option>
-          <option>2017</option>
-          <option>2016</option>
-          <option>2015</option>
+          {pastHundredYears.map(year => <option key={year}>{year}</option>)}
         </Select>
         <Select name="make" placeholder="Make" onChange={this.onChange} value={query.make}>
-          <option>Acura</option>
-          <option>Volvo</option>
-          <option>Honda</option>
+          {makes.map(make => <option key={make}>{make}</option>)}
         </Select>
         <Select name="model" placeholder="Model" onChange={this.onChange} value={query.model}>
-          <option>XC90</option>
+          {models.map(model => <option key={model}>{model}</option>)}
         </Select>
         <Select name="trim" placeholder="Trim" onChange={this.onChange} value={query.trim}>
-          <option>Some Trim</option>
+          {subModels.map(subModel => <option key={subModel}>{subModel}</option>)}
         </Select>
         <Input type="number" min="0" name="mileage" placeholder="Mileage" suffix="KM" onChange={this.onChange} value={query.mileage || ''} />
         <V />

@@ -56,7 +56,6 @@ exports[`snapshot default 1`] = `
 >
   <select
     className="c1"
-    defaultValue={undefined}
     disabled={false}
     onChange={[Function]}
     placeholder={null}
@@ -131,11 +130,10 @@ exports[`snapshot placeholder 1`] = `
 >
   <select
     className="placeholder c1"
-    defaultValue="select-ph"
     disabled={false}
     onChange={[Function]}
     placeholder="Choose"
-    value={undefined}
+    value="select-ph"
   >
     <option
       className="ph"
@@ -213,11 +211,10 @@ exports[`snapshot value set to option text 1`] = `
 >
   <select
     className="c1"
-    defaultValue={undefined}
     disabled={false}
     onChange={[Function]}
     placeholder={null}
-    value="One"
+    value={undefined}
   >
     <option>
       One
@@ -288,11 +285,10 @@ exports[`snapshot value set to option value 1`] = `
 >
   <select
     className="c1"
-    defaultValue={undefined}
     disabled={false}
     onChange={[Function]}
     placeholder={null}
-    value="deux"
+    value={undefined}
   >
     <option
       value="un"

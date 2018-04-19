@@ -10,8 +10,6 @@ import Store from './store';
 import { Router, Route } from '../lib/router';
 import { setIsOpenAction } from './store/ui/actions';
 
-import { getNow } from './data/system'; // Just testing the graphql...
-
 import './index.html';
 
 let app = null;
@@ -40,15 +38,9 @@ class App extends React.Component {
    * Testing graphql and async/await.
    * TODO: remove async and console.log statements.
    */
-  async show() {
+  show() {
     const { setIsOpen } = this.props;
     setIsOpen(true);
-
-    try {
-      console.log('NOW', await getNow());
-    } catch (err) {
-      console.log('err', err);
-    }
   }
 
   @autobind

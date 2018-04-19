@@ -3,5 +3,5 @@ import { snap } from '../../../../../lib/test-utils';
 import Query from '../query';
 
 snap('snapshot default', (
-  <Query onChange={jest.fn()} query={{}} />
+  <Query onQueryChange={jest.fn()} query={{}} makes={[]} models={[]} subModels={[]} />
 ));
