@@ -8,7 +8,7 @@ import Estimate from './ui/domains/estimate';
 import Base from './ui/style/base';
 import Store from './store';
 import { Router, Route } from '../lib/router';
-import { setIsOpenAction } from './store/ui/actions';
+import { setIsOpenAction, setIsLongAction } from './store/ui/actions';
 
 import './index.html';
 
@@ -20,6 +20,7 @@ const stateConnect = state => ({
 
 const dispatchConnect = dispatch => ({
   setIsOpen: isOpen => dispatch(setIsOpenAction(isOpen)),
+  setIsLong: isLong => dispatch(setIsLongAction(isLong)),
 });
 
 @connect(stateConnect, dispatchConnect)
@@ -27,6 +28,7 @@ class App extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     setIsOpen: PropTypes.func.isRequired,
+    setIsLong: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -34,12 +36,10 @@ class App extends React.Component {
     app = this;
   }
 
-  /**
-   * Testing graphql and async/await.
-   * TODO: remove async and console.log statements.
-   */
-  show() {
-    const { setIsOpen } = this.props;
+  show(isLong = false) {
+    const { setIsOpen, setIsLong } = this.props;
+
+    setIsLong(isLong);
     setIsOpen(true);
   }
 
@@ -70,11 +70,9 @@ class App extends React.Component {
   }
 }
 
-/* global window */
-
 window.eblock = {
-  show() {
-    app.show();
+  show(isLong) {
+    app.show(isLong);
   },
 };
 

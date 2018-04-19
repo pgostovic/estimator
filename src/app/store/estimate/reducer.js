@@ -15,8 +15,8 @@ const defaultState = {
 const {
   SET_ESTIMATE_QUERY,
   MAKES_FETCHED, FETCH_MAKES_ERROR,
-  MODELS_FETCHED, FETCH_MODELS_ERROR,
-  SUBMODELS_FETCHED, FETCH_SUBMODELS_ERROR,
+  MODELS_FETCHED, FETCH_MODELS_ERROR, CLEAR_MODELS,
+  SUBMODELS_FETCHED, FETCH_SUBMODELS_ERROR, CLEAR_SUBMODELS,
 } = types;
 
 export default makeReducer({
@@ -29,8 +29,10 @@ export default makeReducer({
 
   [MODELS_FETCHED]: (state, { models }) => ({ ...state, models }),
   [FETCH_MODELS_ERROR]: (state, { error }) => ({ ...state, modelsError: error }),
+  [CLEAR_MODELS]: state => ({ ...state, models: [] }),
 
   [SUBMODELS_FETCHED]: (state, { subModels }) => ({ ...state, subModels }),
   [FETCH_SUBMODELS_ERROR]: (state, { error }) => ({ ...state, subModelsError: error }),
+  [CLEAR_SUBMODELS]: state => ({ ...state, subModels: [] }),
 
 }, defaultState);

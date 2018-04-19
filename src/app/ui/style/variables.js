@@ -15,6 +15,8 @@ export const colorDarkGrey = new Color('#909091');
 export const colorGrey = new Color('#c5c5c5');
 export const colorMediumGrey = new Color('#dedede');
 export const colorLightGrey = new Color('#e0dfdf');
+export const colorPlaceholderGrey = new Color('#f3f3f3');
+export const colorPlaceholderLightGrey = new Color('#f8f8f8');
 export const colorGreen = new Color('#6bbd7d');
 
 export const fontSizeSmall = '16px';

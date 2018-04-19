@@ -30,7 +30,7 @@ exports[`snapshot default 1`] = `
   overflow-y: auto;
 }
 
-#edealer-estimator-test .c23 {
+#edealer-estimator-test .c38 {
   position: absolute;
   top: 0;
   right: 30px;
@@ -53,16 +53,6 @@ exports[`snapshot default 1`] = `
   line-height: 26px;
   padding: 0;
   margin-top: 0;
-  margin-bottom: 15px;
-}
-
-#edealer-estimator-test .c20 {
-  color: #333333;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 26px;
-  padding: 0;
-  margin-top: 15px;
   margin-bottom: 15px;
 }
 
@@ -246,12 +236,36 @@ exports[`snapshot default 1`] = `
   height: 10px;
 }
 
-#edealer-estimator-test .c15 {
-  height: 15px;
+#edealer-estimator-test .c16 {
+  height: 24px;
+}
+
+#edealer-estimator-test .c18 {
+  height: 30px;
 }
 
 #edealer-estimator-test .c21 {
-  height: 5px;
+  height: 11px;
+}
+
+#edealer-estimator-test .c25 {
+  height: 25px;
+}
+
+#edealer-estimator-test .c28 {
+  height: 41px;
+}
+
+#edealer-estimator-test .c30 {
+  height: 37px;
+}
+
+#edealer-estimator-test .c32 {
+  height: 7px;
+}
+
+#edealer-estimator-test .c37 {
+  height: 160px;
 }
 
 #edealer-estimator-test .c3 {
@@ -261,43 +275,109 @@ exports[`snapshot default 1`] = `
   z-index: 5;
 }
 
-#edealer-estimator-test .c22 {
-  color: #333333;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 26px;
-  padding: 0;
-  margin-top: 15px;
-  margin-bottom: 15px;
+#edealer-estimator-test .c15 {
+  background-color: #f3f3f3;
+  border-radius: 9999px;
+  width: 170px;
+  height: 25px;
 }
 
 #edealer-estimator-test .c17 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  background-color: #ffffff;
-  padding: 18px 30px;
-  margin-left: 25px;
+  background-color: #f3f3f3;
   border-radius: 5px;
-  box-shadow: 0 0 12px 0 rgba(0,0,0,0.05);
-}
-
-#edealer-estimator-test .c17:first-child {
-  margin-left: 0;
-}
-
-#edealer-estimator-test .c18 {
-  color: #dedede;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 24px;
+  width: 255px;
+  height: 124px;
 }
 
 #edealer-estimator-test .c19 {
-  color: #6bbd7d;
-  font-size: 44px;
-  font-weight: 800;
-  line-height: 53px;
+  background-color: #f3f3f3;
+  border-radius: 9999px;
+  width: 239px;
+  height: 25px;
+}
+
+#edealer-estimator-test .c20 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 509px;
+  height: 17px;
+}
+
+#edealer-estimator-test .c22 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 519px;
+  height: 17px;
+}
+
+#edealer-estimator-test .c23 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 489px;
+  height: 17px;
+}
+
+#edealer-estimator-test .c24 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 479px;
+  height: 17px;
+}
+
+#edealer-estimator-test .c26 {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  width: 205px;
+  height: 46px;
+}
+
+#edealer-estimator-test .c27 {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  width: 46px;
+  height: 46px;
+}
+
+#edealer-estimator-test .c29 {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  width: default;
+  height: 388px;
+}
+
+#edealer-estimator-test .c31 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 105px;
+  height: 10px;
+}
+
+#edealer-estimator-test .c33 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 505px;
+  height: 10px;
+}
+
+#edealer-estimator-test .c34 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 395px;
+  height: 10px;
+}
+
+#edealer-estimator-test .c35 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 515px;
+  height: 10px;
+}
+
+#edealer-estimator-test .c36 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 145px;
+  height: 10px;
 }
 
 #edealer-estimator-test .c14 {
@@ -308,14 +388,46 @@ exports[`snapshot default 1`] = `
   flex: 1;
 }
 
-#edealer-estimator-test .c16 {
+#edealer-estimator-test .c14 .values-row {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+}
+
+#edealer-estimator-test .c14 .values-row > div:first-child {
+  margin-right: 25px;
+}
+
+#edealer-estimator-test .c14 .text-app-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#edealer-estimator-test .c14 .text-app-row .space {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+#edealer-estimator-test .c14 .text-app-row > div:last-child {
+  margin-left: 10px;
+}
+
+#edealer-estimator-test .c14 .form-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#edealer-estimator-test .c14 .form-row .form {
+  padding-left: 25px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 #edealer-estimator-test .c2 {
@@ -749,47 +861,49 @@ exports[`snapshot default 1`] = `
             value=""
           />
         </div>
-        <div
-          className="c6"
-        />
-        <div
-          className="c11"
-        >
-          <input
-            autoComplete="name"
-            className="c12"
-            name="name"
-            onChange={[Function]}
-            placeholder="Full Name"
-            type="text"
-            value=""
+        <div>
+          <div
+            className="c6"
           />
-        </div>
-        <div
-          className="c11"
-        >
-          <input
-            autoComplete="email"
-            className="c12"
-            name="email"
-            onChange={[Function]}
-            placeholder="Email"
-            type="text"
-            value=""
-          />
-        </div>
-        <div
-          className="c11"
-        >
-          <input
-            autoComplete="tel tel-national"
-            className="c12"
-            name="phone"
-            onChange={[Function]}
-            placeholder="Phone Number"
-            type="tel"
-            value=""
-          />
+          <div
+            className="c11"
+          >
+            <input
+              autoComplete="name"
+              className="c12"
+              name="name"
+              onChange={[Function]}
+              placeholder="Full Name"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            className="c11"
+          >
+            <input
+              autoComplete="email"
+              className="c12"
+              name="email"
+              onChange={[Function]}
+              placeholder="Email"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            className="c11"
+          >
+            <input
+              autoComplete="tel tel-national"
+              className="c12"
+              name="phone"
+              onChange={[Function]}
+              placeholder="Phone Number"
+              type="tel"
+              value=""
+            />
+          </div>
         </div>
         <button
           className="c13"
@@ -800,71 +914,122 @@ exports[`snapshot default 1`] = `
       <div
         className="c14"
       >
-        <h1
-          className="c4"
-        >
-          Quick Estimate
-        </h1>
         <div
           className="c15"
         />
         <div
           className="c16"
+        />
+        <div
+          className="values-row"
         >
           <div
             className="c17"
-          >
-            <label
-              className="c18"
-            >
-              Low Estimate
-            </label>
-            <div
-              className="c19"
-            >
-              $15,000
-            </div>
-          </div>
+          />
           <div
             className="c17"
-          >
-            <label
-              className="c18"
-            >
-              High Estimate
-            </label>
-            <div
-              className="c19"
-            >
-              $18,000
-            </div>
-          </div>
+          />
         </div>
         <div
-          className="c15"
+          className="c18"
         />
-        <h1
+        <div
+          className="c19"
+        />
+        <div
+          className="c18"
+        />
+        <div
           className="c20"
-        >
-          Guaranteed Trade Value
-        </h1>
-        <p
-          className="c5"
-        >
-          Most customers want to know exactly what their trade is worth and we are prepared to give you a guaranteed trade value online! It only takes a few minutes to capture your vehicle information using our app. Get started now or watch the 15 second video to learn more!
-        </p>
+        />
         <div
           className="c21"
         />
-        <h1
+        <div
           className="c22"
-        >
-          Learn why 74% of customers choose a Guaranteed Trade Value.
-        </h1>
+        />
+        <div
+          className="c21"
+        />
+        <div
+          className="c23"
+        />
+        <div
+          className="c21"
+        />
+        <div
+          className="c24"
+        />
+        <div
+          className="c25"
+        />
+        <div>
+          <div
+            className="text-app-row"
+          >
+            <div
+              className="c26"
+            />
+            <div
+              className="space"
+            />
+            <div
+              className="c27"
+            />
+            <div
+              className="c27"
+            />
+          </div>
+          <div
+            className="c28"
+          />
+          <div
+            className="c29"
+          />
+        </div>
+        <div
+          className="c30"
+        />
+        <div
+          className="c31"
+        />
+        <div
+          className="c32"
+        />
+        <div
+          className="c33"
+        />
+        <div
+          className="c32"
+        />
+        <div
+          className="c34"
+        />
+        <div
+          className="c32"
+        />
+        <div
+          className="c35"
+        />
+        <div
+          className="c32"
+        />
+        <div
+          className="c35"
+        />
+        <div
+          className="c32"
+        />
+        <div
+          className="c36"
+        />
+        <div
+          className="c37"
+        />
       </div>
     </div>
     <button
-      className="c23"
+      className="c38"
       onClick={[MockFunction]}
     >
       ×

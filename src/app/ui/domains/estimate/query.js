@@ -17,6 +17,7 @@ const pastHundredYears = [...Array(100).keys()].map(i => nextYear - i);
 
 export default class Query extends React.Component {
   static propTypes = {
+    isLong: PropTypes.bool.isRequired,
     onQueryChange: PropTypes.func.isRequired,
     query: PropTypes.objectOf(PropTypes.string).isRequired,
     makes: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -34,6 +35,7 @@ export default class Query extends React.Component {
 
   render() {
     const {
+      isLong,
       query,
       makes,
       models,
@@ -60,10 +62,14 @@ export default class Query extends React.Component {
           {subModels.map(subModel => <option key={subModel}>{subModel}</option>)}
         </Select>
         <Input type="number" min="0" name="mileage" placeholder="Mileage" suffix="KM" onChange={this.onChange} value={query.mileage || ''} />
-        <V />
-        <Input name="name" placeholder="Full Name" autoComplete="name" onChange={this.onChange} value={query.name || ''} />
-        <Input name="email" placeholder="Email" autoComplete="email" onChange={this.onChange} value={query.email || ''} />
-        <Input type="tel" name="phone" placeholder="Phone Number" autoComplete="tel tel-national" onChange={this.onChange} value={query.phone || ''} />
+        {isLong &&
+          <div>
+            <V />
+            <Input name="name" placeholder="Full Name" autoComplete="name" onChange={this.onChange} value={query.name || ''} />
+            <Input name="email" placeholder="Email" autoComplete="email" onChange={this.onChange} value={query.email || ''} />
+            <Input type="tel" name="phone" placeholder="Phone Number" autoComplete="tel tel-national" onChange={this.onChange} value={query.phone || ''} />
+          </div>
+        }
         <Button theme="green">Calculate</Button>
       </Form>
     );

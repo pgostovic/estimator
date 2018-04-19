@@ -6,17 +6,11 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { asyncEventsMiddleware } from '../../lib/redux-util/asyncEvents';
 import estimateReducer from './estimate/reducer';
 import uiReducer from './ui/reducer';
-// import './search/async';
-// import './artist/async';
-// import './tag/async';
-// import './player/async';
 
 const reducers = combineReducers({
   ui: uiReducer,
   estimate: estimateReducer,
 });
-
-/* global window */
 
 const store = createStore(
   reducers,
