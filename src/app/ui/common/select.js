@@ -70,27 +70,30 @@ class Select extends React.Component {
     onChange: () => {},
   };
 
-  constructor(props) {
-    super(props);
+  static getDerivedStateFromProps(nextProps) {
+    const { value } = nextProps;
 
-    const { placeholder, value } = props;
-
-    this.state = { showPlaceholder: !!placeholder && !value };
+    return !value ? { changed: false } : null;
   }
 
+  state = { changed: false };
+
   render() {
-    const { placeholder, children, onChange } = this.props;
-    const { showPlaceholder } = this.state;
+    const {
+      placeholder, children, onChange, value,
+    } = this.props;
+    const { changed } = this.state;
+    const showPlaceholder = !changed && !!placeholder && !value;
 
     return (
       <SelectOuter>
         <SelectInner
           disabled={!children}
           className={showPlaceholder && 'placeholder'}
-          defaultValue={showPlaceholder ? 'select-ph' : undefined}
           {...this.props}
+          value={showPlaceholder ? 'select-ph' : undefined}
           onChange={event => {
-            this.setState({ showPlaceholder: false });
+            this.setState({ changed: true });
             return onChange(event);
           }}
         >
