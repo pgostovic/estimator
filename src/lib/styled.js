@@ -14,9 +14,11 @@
  * directive.
  */
 
-import styled, { injectGlobal as injectGlobalOrig } from 'styled-components';
+import * as sc from 'styled-components';
 
-const wrap = args => {
+const { injectGlobal, default: styled } = sc;
+
+const wrap = (...args) => {
   const comps = args[0];
   const firstComp = comps[0];
   const lastComp = comps[comps.length - 1];
@@ -30,13 +32,19 @@ const wrap = args => {
   return [wrappedComps, ...args.slice(1)];
 };
 
-export default new Proxy({}, {
-  get(obj, prop) {
-    return (...args) => styled[prop].apply(null, wrap(args));
-  },
+const wrappedStyled = (...args) => (...args2) => styled(...args)(...wrap(...args2));
+
+Object.keys(styled).forEach(key => {
+  wrappedStyled[key] = wrappedStyled(key);
 });
 
-injectGlobalOrig`
+export default wrappedStyled;
+
+Object.keys(sc).filter(key => key !== 'default').forEach(key => {
+  exports[key] = sc[key];
+});
+
+injectGlobal`
   #${__APP__.root} {
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -85,5 +93,3 @@ injectGlobalOrig`
     }
   }
 `;
-
-export const injectGlobal = injectGlobalOrig;
