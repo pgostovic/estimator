@@ -1,6 +1,7 @@
 import { on, dispatch } from '../../../lib/redux-util/asyncEvents';
 
-import { getMakes, getModels, getSubModels } from '../../data/inventory';
+import { getEstimate } from '../../api/estimate';
+import { getMakes, getModels, getSubModels } from '../../api/inventory';
 import {
   types,
   makesFetchedAction,
@@ -9,9 +10,16 @@ import {
   fetchModelsErrorAction,
   subModelsFetchedAction,
   fetchSubModelsErrorAction,
+  estimateFetchedAction,
+  fetchEstimateErrorAction,
 } from './actions';
 
-const { FETCH_MAKES, FETCH_MODELS, FETCH_SUBMODELS } = types;
+const {
+  FETCH_MAKES,
+  FETCH_MODELS,
+  FETCH_SUBMODELS,
+  FETCH_ESTIMATE,
+} = types;
 
 on(FETCH_MAKES, async () => {
   try {
@@ -37,5 +45,14 @@ on(FETCH_SUBMODELS, async ({ make, model }) => {
     dispatch(subModelsFetchedAction(subModels));
   } catch (error) {
     dispatch(fetchSubModelsErrorAction(error.toString()));
+  }
+});
+
+on(FETCH_ESTIMATE, async () => {
+  try {
+    const estimate = await getEstimate();
+    dispatch(estimateFetchedAction(estimate));
+  } catch (error) {
+    dispatch(fetchEstimateErrorAction(error.toString()));
   }
 });

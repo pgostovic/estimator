@@ -19,10 +19,19 @@ export default class Query extends React.Component {
   static propTypes = {
     isLong: PropTypes.bool.isRequired,
     onQueryChange: PropTypes.func.isRequired,
+    onQuerySubmit: PropTypes.func.isRequired,
     query: PropTypes.objectOf(PropTypes.string).isRequired,
     makes: PropTypes.arrayOf(PropTypes.string).isRequired,
     models: PropTypes.arrayOf(PropTypes.string).isRequired,
     subModels: PropTypes.arrayOf(PropTypes.string).isRequired,
+    estimateResults: PropTypes.shape({
+      low: PropTypes.number,
+      high: PropTypes.number,
+    }),
+  };
+
+  static defaultProps = {
+    estimateResults: null,
   };
 
   @autobind
@@ -40,10 +49,16 @@ export default class Query extends React.Component {
       makes,
       models,
       subModels,
+      onQuerySubmit,
+      estimateResults,
     } = this.props;
 
     return (
-      <Form>
+      <Form onSubmit={event => {
+          event.preventDefault();
+          onQuerySubmit();
+        }}
+      >
         <H1 noTopMargin>What’s my car worth?</H1>
         <P>
           Receive a close estimate of your trade value using real Canadian auction data.
@@ -70,7 +85,7 @@ export default class Query extends React.Component {
             <Input type="tel" name="phone" placeholder="Phone Number" autoComplete="tel tel-national" onChange={this.onChange} value={query.phone || ''} />
           </div>
         }
-        <Button theme="green">Calculate</Button>
+        <Button theme="green">{estimateResults && 'Re'}Calculate</Button>
       </Form>
     );
   }

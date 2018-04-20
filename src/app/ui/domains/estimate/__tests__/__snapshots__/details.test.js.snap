@@ -1,78 +1,141 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`snapshot default 1`] = `
-#edealer-estimator-test .c1 {
-  color: #333333;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 26px;
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-
-#edealer-estimator-test .c7 {
-  color: #333333;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 26px;
-  padding: 0;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-#edealer-estimator-test .c10 {
-  color: #333333;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 26px;
-  padding: 0;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-#edealer-estimator-test .c8 {
-  padding: 0;
-  margin: 0;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
 #edealer-estimator-test .c2 {
-  height: 15px;
-}
-
-#edealer-estimator-test .c9 {
-  height: 5px;
+  height: 24px;
 }
 
 #edealer-estimator-test .c4 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  background-color: #ffffff;
-  padding: 18px 30px;
-  margin-left: 25px;
-  border-radius: 5px;
-  box-shadow: 0 0 12px 0 rgba(0,0,0,0.05);
+  height: 30px;
 }
 
-#edealer-estimator-test .c4:first-child {
-  margin-left: 0;
+#edealer-estimator-test .c7 {
+  height: 11px;
+}
+
+#edealer-estimator-test .c11 {
+  height: 25px;
+}
+
+#edealer-estimator-test .c14 {
+  height: 41px;
+}
+
+#edealer-estimator-test .c16 {
+  height: 37px;
+}
+
+#edealer-estimator-test .c18 {
+  height: 7px;
+}
+
+#edealer-estimator-test .c23 {
+  height: 160px;
+}
+
+#edealer-estimator-test .c1 {
+  background-color: #f3f3f3;
+  border-radius: 9999px;
+  width: 170px;
+  height: 25px;
+}
+
+#edealer-estimator-test .c3 {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  width: 255px;
+  height: 124px;
 }
 
 #edealer-estimator-test .c5 {
-  color: #dedede;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 24px;
+  background-color: #f3f3f3;
+  border-radius: 9999px;
+  width: 239px;
+  height: 25px;
 }
 
 #edealer-estimator-test .c6 {
-  color: #6bbd7d;
-  font-size: 44px;
-  font-weight: 800;
-  line-height: 53px;
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 509px;
+  height: 17px;
+}
+
+#edealer-estimator-test .c8 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 519px;
+  height: 17px;
+}
+
+#edealer-estimator-test .c9 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 489px;
+  height: 17px;
+}
+
+#edealer-estimator-test .c10 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 479px;
+  height: 17px;
+}
+
+#edealer-estimator-test .c12 {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  width: 205px;
+  height: 46px;
+}
+
+#edealer-estimator-test .c13 {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  width: 46px;
+  height: 46px;
+}
+
+#edealer-estimator-test .c15 {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  width: default;
+  height: 388px;
+}
+
+#edealer-estimator-test .c17 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 105px;
+  height: 10px;
+}
+
+#edealer-estimator-test .c19 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 505px;
+  height: 10px;
+}
+
+#edealer-estimator-test .c20 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 395px;
+  height: 10px;
+}
+
+#edealer-estimator-test .c21 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 515px;
+  height: 10px;
+}
+
+#edealer-estimator-test .c22 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 145px;
+  height: 10px;
 }
 
 #edealer-estimator-test .c0 {
@@ -83,79 +146,162 @@ exports[`snapshot default 1`] = `
   flex: 1;
 }
 
-#edealer-estimator-test .c3 {
+#edealer-estimator-test .c0 .values-row {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+}
+
+#edealer-estimator-test .c0 .values-row > div:first-child {
+  margin-right: 25px;
+}
+
+#edealer-estimator-test .c0 .text-app-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#edealer-estimator-test .c0 .text-app-row .space {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+#edealer-estimator-test .c0 .text-app-row > div:last-child {
+  margin-left: 10px;
+}
+
+#edealer-estimator-test .c0 .form-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#edealer-estimator-test .c0 .form-row .form {
+  padding-left: 25px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 <div
   className="c0"
 >
-  <h1
+  <div
     className="c1"
-  >
-    Quick Estimate
-  </h1>
+  />
   <div
     className="c2"
   />
   <div
-    className="c3"
+    className="values-row"
   >
     <div
-      className="c4"
-    >
-      <label
-        className="c5"
-      >
-        Low Estimate
-      </label>
-      <div
-        className="c6"
-      >
-        $15,000
-      </div>
-    </div>
+      className="c3"
+    />
     <div
-      className="c4"
-    >
-      <label
-        className="c5"
-      >
-        High Estimate
-      </label>
-      <div
-        className="c6"
-      >
-        $18,000
-      </div>
-    </div>
+      className="c3"
+    />
   </div>
   <div
-    className="c2"
+    className="c4"
   />
-  <h1
+  <div
+    className="c5"
+  />
+  <div
+    className="c4"
+  />
+  <div
+    className="c6"
+  />
+  <div
     className="c7"
-  >
-    Guaranteed Trade Value
-  </h1>
-  <p
+  />
+  <div
     className="c8"
-  >
-    Most customers want to know exactly what their trade is worth and we are prepared to give you a guaranteed trade value online! It only takes a few minutes to capture your vehicle information using our app. Get started now or watch the 15 second video to learn more!
-  </p>
+  />
+  <div
+    className="c7"
+  />
   <div
     className="c9"
   />
-  <h1
+  <div
+    className="c7"
+  />
+  <div
     className="c10"
-  >
-    Learn why 74% of customers choose a Guaranteed Trade Value.
-  </h1>
+  />
+  <div
+    className="c11"
+  />
+  <div>
+    <div
+      className="text-app-row"
+    >
+      <div
+        className="c12"
+      />
+      <div
+        className="space"
+      />
+      <div
+        className="c13"
+      />
+      <div
+        className="c13"
+      />
+    </div>
+    <div
+      className="c14"
+    />
+    <div
+      className="c15"
+    />
+  </div>
+  <div
+    className="c16"
+  />
+  <div
+    className="c17"
+  />
+  <div
+    className="c18"
+  />
+  <div
+    className="c19"
+  />
+  <div
+    className="c18"
+  />
+  <div
+    className="c20"
+  />
+  <div
+    className="c18"
+  />
+  <div
+    className="c21"
+  />
+  <div
+    className="c18"
+  />
+  <div
+    className="c21"
+  />
+  <div
+    className="c18"
+  />
+  <div
+    className="c22"
+  />
+  <div
+    className="c23"
+  />
 </div>
 `;

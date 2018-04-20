@@ -5,6 +5,7 @@ export const types = makeEnum(
   'FETCH_MAKES', 'MAKES_FETCHED', 'FETCH_MAKES_ERROR',
   'FETCH_MODELS', 'MODELS_FETCHED', 'FETCH_MODELS_ERROR', 'CLEAR_MODELS',
   'FETCH_SUBMODELS', 'SUBMODELS_FETCHED', 'FETCH_SUBMODELS_ERROR', 'CLEAR_SUBMODELS',
+  'FETCH_ESTIMATE', 'ESTIMATE_FETCHED', 'FETCH_ESTIMATE_ERROR', 'CLEAR_ESTIMATE',
 );
 
 export const setQueryAction = (name, value) => ({ type: types.SET_ESTIMATE_QUERY, name, value });
@@ -22,3 +23,10 @@ export const fetchSubModelsAction = (make, model) => ({ type: types.FETCH_SUBMOD
 export const subModelsFetchedAction = subModels => ({ type: types.SUBMODELS_FETCHED, subModels });
 export const fetchSubModelsErrorAction = error => ({ type: types.FETCH_SUBMODELS_ERROR, error });
 export const clearSubModelsAction = () => ({ type: types.CLEAR_SUBMODELS });
+
+export const fetchEstimateAction = (year, make, model, trim, mileage) => ({
+  type: types.FETCH_ESTIMATE, year, make, model, trim, mileage,
+});
+export const estimateFetchedAction = estimateResults => ({ type: types.ESTIMATE_FETCHED, estimateResults });
+export const fetchEstimateErrorAction = error => ({ type: types.FETCH_ESTIMATE_ERROR, error });
+export const clearEstimateAction = () => ({ type: types.CLEAR_ESTIMATE });

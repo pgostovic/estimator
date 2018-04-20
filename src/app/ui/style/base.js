@@ -7,7 +7,6 @@ import {
   fontWeightSemiBold,
   fontWeightBold,
   fontWeightExtraBold,
-  colorDarkGrey,
   fontSizeMedium,
 } from './variables';
 import proximaNovaThin from '../static/fonts/ProximaNova-Thin.otf';
@@ -57,7 +56,6 @@ export default styled.article`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: ${fontDefault};
-  color: ${colorDarkGrey};
   font-size: ${fontSizeMedium};
   font-weight: ${fontWeightRegular};
   line-height: 28px;

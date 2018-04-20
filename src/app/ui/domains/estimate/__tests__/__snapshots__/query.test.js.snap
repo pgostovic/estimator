@@ -12,6 +12,7 @@ exports[`snapshot default 1`] = `
 }
 
 #edealer-estimator-test .c2 {
+  color: #909091;
   padding: 0;
   margin: 0;
   margin-top: 15px;
@@ -200,6 +201,7 @@ exports[`snapshot default 1`] = `
 
 <form
   className="c0"
+  onSubmit={[Function]}
 >
   <h1
     className="c1"
@@ -653,6 +655,576 @@ exports[`snapshot default 1`] = `
   </div>
   <button
     className="c10"
+  >
+    Calculate
+  </button>
+</form>
+`;
+
+exports[`snapshot default not isLong 1`] = `
+#edealer-estimator-test .c1 {
+  color: #333333;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+#edealer-estimator-test .c2 {
+  color: #909091;
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#edealer-estimator-test .c4 {
+  position: relative;
+}
+
+#edealer-estimator-test .c4:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid #e0dfdf;
+  border-bottom: 2px solid #e0dfdf;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+}
+
+#edealer-estimator-test .c5 {
+  font-family: proxima nova;
+  display: block;
+  box-sizing: border-box;
+  height: 45px;
+  width: 100%;
+  border: 2px solid #e0dfdf;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-left: 20px;
+  padding-right: 30px;
+  color: #333333;
+  background-color: transparent;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+#edealer-estimator-test .c5:disabled {
+  cursor: not-allowed;
+}
+
+#edealer-estimator-test .c5.placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c6 {
+  position: relative;
+}
+
+#edealer-estimator-test .c6:after {
+  content: 'KM';
+  position: absolute;
+  right: 18px;
+  top: 10px;
+  color: #c5c5c5;
+  font-size: 16px;
+}
+
+#edealer-estimator-test .c7 {
+  font-family: proxima nova;
+  display: block;
+  box-sizing: border-box;
+  height: 45px;
+  width: 100%;
+  color: #333333;
+  border: 2px solid #e0dfdf;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-left: 20px;
+  padding-right: 45px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#edealer-estimator-test .c7::-webkit-input-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c7::-moz-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c7:-ms-input-placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c7::placeholder {
+  color: #c5c5c5;
+}
+
+#edealer-estimator-test .c8 {
+  font-family: proxima nova;
+  display: block;
+  box-sizing: border-box;
+  height: 45px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  background: #6bbd7d;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 2px;
+  -moz-letter-spacing: 2px;
+  -ms-letter-spacing: 2px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  outline: 0;
+}
+
+#edealer-estimator-test .c8:active {
+  box-shadow: inset 0 0 10px rgba(51,51,51,0.5);
+}
+
+#edealer-estimator-test .c3 {
+  height: 10px;
+}
+
+#edealer-estimator-test .c0 {
+  width: 265px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(51,51,51,0.1);
+  z-index: 5;
+}
+
+<form
+  className="c0"
+  onSubmit={[Function]}
+>
+  <h1
+    className="c1"
+  >
+    What’s my car worth?
+  </h1>
+  <p
+    className="c2"
+  >
+    Receive a close estimate of your trade value using real Canadian auction data.
+  </p>
+  <div
+    className="c3"
+  />
+  <div
+    className="c4"
+  >
+    <select
+      className="placeholder c5"
+      disabled={false}
+      name="year"
+      onChange={[Function]}
+      placeholder="Year"
+      value="select-ph"
+    >
+      <option
+        className="ph"
+        disabled={true}
+        value="select-ph"
+      >
+        Year
+      </option>
+      <option>
+        2019
+      </option>
+      <option>
+        2018
+      </option>
+      <option>
+        2017
+      </option>
+      <option>
+        2016
+      </option>
+      <option>
+        2015
+      </option>
+      <option>
+        2014
+      </option>
+      <option>
+        2013
+      </option>
+      <option>
+        2012
+      </option>
+      <option>
+        2011
+      </option>
+      <option>
+        2010
+      </option>
+      <option>
+        2009
+      </option>
+      <option>
+        2008
+      </option>
+      <option>
+        2007
+      </option>
+      <option>
+        2006
+      </option>
+      <option>
+        2005
+      </option>
+      <option>
+        2004
+      </option>
+      <option>
+        2003
+      </option>
+      <option>
+        2002
+      </option>
+      <option>
+        2001
+      </option>
+      <option>
+        2000
+      </option>
+      <option>
+        1999
+      </option>
+      <option>
+        1998
+      </option>
+      <option>
+        1997
+      </option>
+      <option>
+        1996
+      </option>
+      <option>
+        1995
+      </option>
+      <option>
+        1994
+      </option>
+      <option>
+        1993
+      </option>
+      <option>
+        1992
+      </option>
+      <option>
+        1991
+      </option>
+      <option>
+        1990
+      </option>
+      <option>
+        1989
+      </option>
+      <option>
+        1988
+      </option>
+      <option>
+        1987
+      </option>
+      <option>
+        1986
+      </option>
+      <option>
+        1985
+      </option>
+      <option>
+        1984
+      </option>
+      <option>
+        1983
+      </option>
+      <option>
+        1982
+      </option>
+      <option>
+        1981
+      </option>
+      <option>
+        1980
+      </option>
+      <option>
+        1979
+      </option>
+      <option>
+        1978
+      </option>
+      <option>
+        1977
+      </option>
+      <option>
+        1976
+      </option>
+      <option>
+        1975
+      </option>
+      <option>
+        1974
+      </option>
+      <option>
+        1973
+      </option>
+      <option>
+        1972
+      </option>
+      <option>
+        1971
+      </option>
+      <option>
+        1970
+      </option>
+      <option>
+        1969
+      </option>
+      <option>
+        1968
+      </option>
+      <option>
+        1967
+      </option>
+      <option>
+        1966
+      </option>
+      <option>
+        1965
+      </option>
+      <option>
+        1964
+      </option>
+      <option>
+        1963
+      </option>
+      <option>
+        1962
+      </option>
+      <option>
+        1961
+      </option>
+      <option>
+        1960
+      </option>
+      <option>
+        1959
+      </option>
+      <option>
+        1958
+      </option>
+      <option>
+        1957
+      </option>
+      <option>
+        1956
+      </option>
+      <option>
+        1955
+      </option>
+      <option>
+        1954
+      </option>
+      <option>
+        1953
+      </option>
+      <option>
+        1952
+      </option>
+      <option>
+        1951
+      </option>
+      <option>
+        1950
+      </option>
+      <option>
+        1949
+      </option>
+      <option>
+        1948
+      </option>
+      <option>
+        1947
+      </option>
+      <option>
+        1946
+      </option>
+      <option>
+        1945
+      </option>
+      <option>
+        1944
+      </option>
+      <option>
+        1943
+      </option>
+      <option>
+        1942
+      </option>
+      <option>
+        1941
+      </option>
+      <option>
+        1940
+      </option>
+      <option>
+        1939
+      </option>
+      <option>
+        1938
+      </option>
+      <option>
+        1937
+      </option>
+      <option>
+        1936
+      </option>
+      <option>
+        1935
+      </option>
+      <option>
+        1934
+      </option>
+      <option>
+        1933
+      </option>
+      <option>
+        1932
+      </option>
+      <option>
+        1931
+      </option>
+      <option>
+        1930
+      </option>
+      <option>
+        1929
+      </option>
+      <option>
+        1928
+      </option>
+      <option>
+        1927
+      </option>
+      <option>
+        1926
+      </option>
+      <option>
+        1925
+      </option>
+      <option>
+        1924
+      </option>
+      <option>
+        1923
+      </option>
+      <option>
+        1922
+      </option>
+      <option>
+        1921
+      </option>
+      <option>
+        1920
+      </option>
+    </select>
+  </div>
+  <div
+    className="c4"
+  >
+    <select
+      className="placeholder c5"
+      disabled={false}
+      name="make"
+      onChange={[Function]}
+      placeholder="Make"
+      value="select-ph"
+    >
+      <option
+        className="ph"
+        disabled={true}
+        value="select-ph"
+      >
+        Make
+      </option>
+    </select>
+  </div>
+  <div
+    className="c4"
+  >
+    <select
+      className="placeholder c5"
+      disabled={false}
+      name="model"
+      onChange={[Function]}
+      placeholder="Model"
+      value="select-ph"
+    >
+      <option
+        className="ph"
+        disabled={true}
+        value="select-ph"
+      >
+        Model
+      </option>
+    </select>
+  </div>
+  <div
+    className="c4"
+  >
+    <select
+      className="placeholder c5"
+      disabled={false}
+      name="trim"
+      onChange={[Function]}
+      placeholder="Trim"
+      value="select-ph"
+    >
+      <option
+        className="ph"
+        disabled={true}
+        value="select-ph"
+      >
+        Trim
+      </option>
+    </select>
+  </div>
+  <div
+    className="c6"
+  >
+    <input
+      className="c7"
+      min="0"
+      name="mileage"
+      onChange={[Function]}
+      placeholder="Mileage"
+      type="number"
+      value=""
+    />
+  </div>
+  <button
+    className="c8"
   >
     Calculate
   </button>

@@ -3,5 +3,5 @@ import { snap } from '../../../../../lib/test-utils';
 import Details from '../details';
 
 snap('snapshot default', (
-  <Details />
+  <Details isLong />
 ));

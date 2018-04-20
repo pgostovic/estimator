@@ -2,6 +2,7 @@
 
 exports[`snapshot default 1`] = `
 #edealer-estimator-test .c0 {
+  color: #909091;
   padding: 0;
   margin: 0;
   margin-top: 15px;
@@ -17,6 +18,7 @@ exports[`snapshot default 1`] = `
 
 exports[`snapshot noBottomMargin 1`] = `
 #edealer-estimator-test .c0 {
+  color: #909091;
   padding: 0;
   margin: 0;
   margin-top: 15px;
@@ -32,6 +34,7 @@ exports[`snapshot noBottomMargin 1`] = `
 
 exports[`snapshot noTopMargin 1`] = `
 #edealer-estimator-test .c0 {
+  color: #909091;
   padding: 0;
   margin: 0;
   margin-top: 0;

@@ -11,16 +11,17 @@ import {
   fetchSubModelsAction,
   clearModelsAction,
   clearSubModelsAction,
+  fetchEstimateAction,
 } from '../../../store/estimate/actions';
 
 
 const stateConnect = ({
   ui: { isLong },
   estimate: {
-    query, makes, models, subModels,
+    query, makes, models, subModels, estimateResults,
   },
 }) => ({
-  isLong, query, makes, models, subModels,
+  isLong, query, makes, models, subModels, estimateResults,
 });
 
 const dispatchConnect = dispatch => ({
@@ -30,6 +31,7 @@ const dispatchConnect = dispatch => ({
   fetchSubModels: (make, model) => dispatch(fetchSubModelsAction(make, model)),
   clearModels: () => dispatch(clearModelsAction()),
   clearSubModels: () => dispatch(clearSubModelsAction()),
+  fetchEstimate: (year, make, model, trim, mileage) => dispatch(fetchEstimateAction(year, make, model, trim, mileage)),
 });
 
 @connect(stateConnect, dispatchConnect)
@@ -42,6 +44,7 @@ class Estimate extends React.Component {
     fetchSubModels: PropTypes.func.isRequired,
     clearModels: PropTypes.func.isRequired,
     clearSubModels: PropTypes.func.isRequired,
+    fetchEstimate: PropTypes.func.isRequired,
     isLong: PropTypes.bool.isRequired,
     query: PropTypes.objectOf(PropTypes.string).isRequired,
     makes: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -69,7 +72,7 @@ class Estimate extends React.Component {
     setQuery(name, value);
 
     /**
-     * May need to unset some query values in certain situations. For example,
+     * Need to unset some query values in certain situations. For example,
      * if a user has already selected a model and trim but then changes the make,
      * then the selected model and trim are no longer relevant.
      */
@@ -86,8 +89,20 @@ class Estimate extends React.Component {
     }
   }
 
+  @autobind
+  onQuerySubmit() {
+    const {
+      fetchEstimate,
+      query: {
+        year, make, model, trim, mileage,
+      },
+    } = this.props;
+
+    fetchEstimate(year, make, model, trim, mileage);
+  }
+
   render() {
-    return <View onQueryChange={this.onQueryChange} {...this.props} />;
+    return <View onQueryChange={this.onQueryChange} onQuerySubmit={this.onQuerySubmit} {...this.props} />;
   }
 }
 
