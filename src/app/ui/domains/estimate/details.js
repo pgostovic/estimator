@@ -8,7 +8,7 @@ import P from '../../common/p';
 import V from '../../common/v';
 import EstimateValue from './estimateValue';
 import EmptyDetails from './emptyDetails';
-import { colorOffWhite, paddingFrame } from '../../style/variables';
+import { colorOffWhite, paddingFrame, fontSizeFine } from '../../style/variables';
 
 
 const DetailsFrame = styled.div`
@@ -22,6 +22,10 @@ const EstimateValues = styled.div`
   flex-direction: row;
 `;
 
+const FinePrint = styled(P)`
+  font-size: ${fontSizeFine};
+  line-height: 16px;
+`;
 
 const Details = ({ estimateResults, isLong }) => (estimateResults
   ?
@@ -39,6 +43,10 @@ const Details = ({ estimateResults, isLong }) => (estimateResults
       </P>
       <V px={5} />
       <H2>Learn why 74% of customers choose a Guaranteed Trade Value.</H2>
+      <FinePrint>
+        Understanding the Trade-in Value<br />
+        The trade-in value is presented as a guideline to give you a range of what you could expect to get from a dealer. It is important to note that when a dealer takes a vehicle in on trade, they will need to recondition and market it for resale. These costs are taken into account when providing a trade-in value. When trading in a vehicle, the value is applied to the transaction price prior to calculating the applicable sales taxes which can result in a tax saving to you. While selling a vehicle privately may garner a higher sale price than what you could expect when trading in, you may not receive the tax benefit.
+      </FinePrint>
     </DetailsFrame>
   :
     <EmptyDetails isLong={isLong} />

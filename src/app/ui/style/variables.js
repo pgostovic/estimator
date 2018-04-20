@@ -19,6 +19,7 @@ export const colorPlaceholderGrey = new Color('#f3f3f3');
 export const colorPlaceholderLightGrey = new Color('#f8f8f8');
 export const colorGreen = new Color('#6bbd7d');
 
+export const fontSizeFine = '10px';
 export const fontSizeSmall = '16px';
 export const fontSizeMedium = '18px';
 export const fontSizeMediumLarge = '20px';
