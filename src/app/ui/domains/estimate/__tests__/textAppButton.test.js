@@ -1,7 +1,7 @@
 import React from 'react';
 import snap from '../../../../../lib/test-utils/snap';
-import EstimateValue from '../estimateValue';
+import TextAppButton from '../textAppButton';
 
 snap('snapshot default', (
-  <EstimateValue title="Some Title" value={123} />
+  <TextAppButton lead={{}} onLeadChange={jest.fn()} />
 ));

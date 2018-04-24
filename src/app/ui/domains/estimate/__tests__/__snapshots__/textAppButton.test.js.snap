@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot default 1`] = `
+#edealer-estimator-test .c0 {
+  font-family: proxima nova;
+  display: block;
+  box-sizing: border-box;
+  height: 45px;
+  width: 205px;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  background: linear-gradient(178.8deg,#ff9353 0%,#ff5E64 100%);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 2px;
+  -moz-letter-spacing: 2px;
+  -ms-letter-spacing: 2px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  outline: 0;
+}
+
+#edealer-estimator-test .c0:active {
+  box-shadow: inset 0 0 10px rgba(51,51,51,0.5);
+}
+
+<span>
+  <button
+    className="c0"
+    onClick={[Function]}
+  >
+    Text me the app
+  </button>
+</span>
+`;

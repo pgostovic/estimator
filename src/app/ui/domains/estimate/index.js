@@ -13,6 +13,7 @@ import {
   clearSubModelsAction,
   fetchEstimateAction,
 } from '../../../store/estimate/actions';
+import { setLeadAction } from '../../../store/lead/actions';
 
 
 const stateConnect = ({
@@ -20,12 +21,14 @@ const stateConnect = ({
   estimate: {
     query, makes, models, subModels, estimateResults,
   },
+  lead,
 }) => ({
-  isLong, query, makes, models, subModels, estimateResults,
+  isLong, query, makes, models, subModels, estimateResults, lead,
 });
 
 const dispatchConnect = dispatch => ({
   setQuery: (name, value) => dispatch(setQueryAction(name, value)),
+  setLead: (name, value) => dispatch(setLeadAction(name, value)),
   fetchMakes: () => dispatch(fetchMakesAction()),
   fetchModels: make => dispatch(fetchModelsAction(make)),
   fetchSubModels: (make, model) => dispatch(fetchSubModelsAction(make, model)),
@@ -39,6 +42,7 @@ class Estimate extends React.Component {
   static propTypes = {
     onClose: PropTypes.func.isRequired,
     setQuery: PropTypes.func.isRequired,
+    setLead: PropTypes.func.isRequired,
     fetchMakes: PropTypes.func.isRequired,
     fetchModels: PropTypes.func.isRequired,
     fetchSubModels: PropTypes.func.isRequired,
@@ -56,6 +60,13 @@ class Estimate extends React.Component {
     const { fetchMakes } = this.props;
 
     fetchMakes();
+  }
+
+  @autobind
+  onLeadChange(name, value) {
+    const { setLead } = this.props;
+
+    setLead(name, value);
   }
 
   @autobind
@@ -102,7 +113,14 @@ class Estimate extends React.Component {
   }
 
   render() {
-    return <View onQueryChange={this.onQueryChange} onQuerySubmit={this.onQuerySubmit} {...this.props} />;
+    return (
+      <View
+        onQueryChange={this.onQueryChange}
+        onQuerySubmit={this.onQuerySubmit}
+        onLeadChange={this.onLeadChange}
+        {...this.props}
+      />
+    );
   }
 }
 

@@ -5,11 +5,13 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 
 import { asyncEventsMiddleware } from '../../lib/redux-util/asyncEvents';
 import estimateReducer from './estimate/reducer';
+import leadReducer from './lead/reducer';
 import uiReducer from './ui/reducer';
 
 const reducers = combineReducers({
   ui: uiReducer,
   estimate: estimateReducer,
+  lead: leadReducer,
 });
 
 const store = createStore(

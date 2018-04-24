@@ -38,6 +38,7 @@ const SelectInner = styled.select`
   border: 2px solid ${colorLightGrey};
   border-radius: 5px;
   appearance: none;
+  outline: 0;
   padding-left: 20px;
   padding-right: 30px;
   color: ${colorBlack};
@@ -52,6 +53,10 @@ const SelectInner = styled.select`
 
   &.placeholder {
     color: ${colorGrey}
+  }
+
+  &:focus {
+    border-color: ${colorGrey};
   }
 `;
 

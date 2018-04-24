@@ -1,5 +1,5 @@
 import React from 'react';
-import { snap } from '../../../../lib/test-utils';
+import snap from '../../../../lib/test-utils/snap';
 import P from '../p';
 
 snap('snapshot default', (

@@ -26,6 +26,7 @@ exports[`snapshot text default 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
   padding-left: 20px;
   padding-right: 20px;
   font-size: 16px;
@@ -46,6 +47,10 @@ exports[`snapshot text default 1`] = `
 
 #edealer-estimator-test .c1::placeholder {
   color: #c5c5c5;
+}
+
+#edealer-estimator-test .c1:focus {
+  border-color: #c5c5c5;
 }
 
 <div
@@ -84,6 +89,7 @@ exports[`snapshot text with suffix 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
   padding-left: 20px;
   padding-right: 45px;
   font-size: 16px;
@@ -104,6 +110,10 @@ exports[`snapshot text with suffix 1`] = `
 
 #edealer-estimator-test .c1::placeholder {
   color: #c5c5c5;
+}
+
+#edealer-estimator-test .c1:focus {
+  border-color: #c5c5c5;
 }
 
 <div

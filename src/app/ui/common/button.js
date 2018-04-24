@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styled from '../../../lib/styled';
 
 import {
@@ -15,6 +16,9 @@ const bgForTheme = (theme = 'green') => {
     case 'green':
       return colorGreen;
 
+    case 'black':
+      return colorBlack;
+
     case 'orange-gradient':
       return 'linear-gradient(178.8deg, #ff9353 0%, #ff5E64 100%)';
 
@@ -27,8 +31,8 @@ const Button = styled.button`
   font-family: ${fontDefault};
   display: block;
   box-sizing: border-box;
-  height: 45px;
-  width: 100%;
+  height: ${props => (props.h ? `${props.h}px` : '45px')};
+  width: ${props => (props.w ? `${props.w}px` : '100%')};
   border: none;
   border-radius: 5px;
   color: ${colorWhite};
@@ -44,5 +48,17 @@ const Button = styled.button`
     box-shadow: inset 0 0 10px ${colorBlack.alpha(0.5)};
   }
 `;
+
+Button.propTypes = {
+  theme: PropTypes.oneOf(['green', 'orange-gradient', 'black']),
+  w: PropTypes.number,
+  h: PropTypes.number,
+};
+
+Button.defaultProps = {
+  theme: null,
+  w: null,
+  h: null,
+};
 
 export default Button;

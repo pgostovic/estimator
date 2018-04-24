@@ -42,6 +42,10 @@ const baseConfig = {
         },
       },
       {
+        test: /\.svg$/,
+        loader: 'svg-react-loader',
+      },
+      {
         test: /\.(otf)$/,
         use: [
           {

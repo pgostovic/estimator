@@ -34,6 +34,7 @@ const InputInner = styled.input`
   border: 2px solid ${colorLightGrey};
   border-radius: 5px;
   appearance: none;
+  outline: 0;
   padding-left: 20px;
   padding-right: ${props => (props.suffix ? '45px' : '20px')};
   font-size: ${fontSizeSmall};
@@ -41,6 +42,10 @@ const InputInner = styled.input`
 
   &::placeholder {
     color: ${colorGrey};
+  }
+
+  &:focus {
+    border-color: ${colorGrey};
   }
 `;
 

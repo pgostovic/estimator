@@ -20,7 +20,9 @@ export default class Query extends React.Component {
     isLong: PropTypes.bool.isRequired,
     onQueryChange: PropTypes.func.isRequired,
     onQuerySubmit: PropTypes.func.isRequired,
+    onLeadChange: PropTypes.func.isRequired,
     query: PropTypes.objectOf(PropTypes.string).isRequired,
+    lead: PropTypes.objectOf(PropTypes.string).isRequired,
     makes: PropTypes.arrayOf(PropTypes.string).isRequired,
     models: PropTypes.arrayOf(PropTypes.string).isRequired,
     subModels: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -35,17 +37,26 @@ export default class Query extends React.Component {
   };
 
   @autobind
-  onChange(event) {
+  onQueryChange(event) {
     const { onQueryChange } = this.props;
     const { name, value } = event.target;
 
     onQueryChange(name, value);
   }
 
+  @autobind
+  onLeadChange(event) {
+    const { onLeadChange } = this.props;
+    const { name, value } = event.target;
+
+    onLeadChange(name, value);
+  }
+
   render() {
     const {
       isLong,
       query,
+      lead,
       makes,
       models,
       subModels,
@@ -64,25 +75,25 @@ export default class Query extends React.Component {
           Receive a close estimate of your trade value using real Canadian auction data.
         </P>
         <V />
-        <Select name="year" placeholder="Year" onChange={this.onChange} value={query.year}>
+        <Select name="year" placeholder="Year" onChange={this.onQueryChange} value={query.year}>
           {pastHundredYears.map(year => <option key={year}>{year}</option>)}
         </Select>
-        <Select name="make" placeholder="Make" onChange={this.onChange} value={query.make}>
+        <Select name="make" placeholder="Make" onChange={this.onQueryChange} value={query.make}>
           {makes.map(make => <option key={make}>{make}</option>)}
         </Select>
-        <Select name="model" placeholder="Model" onChange={this.onChange} value={query.model}>
+        <Select name="model" placeholder="Model" onChange={this.onQueryChange} value={query.model}>
           {models.map(model => <option key={model}>{model}</option>)}
         </Select>
-        <Select name="trim" placeholder="Trim" onChange={this.onChange} value={query.trim}>
+        <Select name="trim" placeholder="Trim" onChange={this.onQueryChange} value={query.trim}>
           {subModels.map(subModel => <option key={subModel}>{subModel}</option>)}
         </Select>
-        <Input type="number" min="0" name="mileage" placeholder="Mileage" suffix="KM" onChange={this.onChange} value={query.mileage || ''} />
+        <Input type="number" min="0" name="mileage" placeholder="Mileage" suffix="KM" onChange={this.onQueryChange} value={query.mileage || ''} />
         {isLong &&
           <div>
             <V />
-            <Input name="name" placeholder="Full Name" autoComplete="name" onChange={this.onChange} value={query.name || ''} />
-            <Input name="email" placeholder="Email" autoComplete="email" onChange={this.onChange} value={query.email || ''} />
-            <Input type="tel" name="phone" placeholder="Phone Number" autoComplete="tel tel-national" onChange={this.onChange} value={query.phone || ''} />
+            <Input name="name" placeholder="Full Name" autoComplete="name" onChange={this.onLeadChange} value={lead.name || ''} />
+            <Input name="email" placeholder="Email" autoComplete="email" onChange={this.onLeadChange} value={lead.email || ''} />
+            <Input type="tel" name="phone" placeholder="Phone Number" autoComplete="tel tel-national" onChange={this.onLeadChange} value={lead.phone || ''} />
           </div>
         }
         <Button theme="green">{estimateResults && 'Re'}Calculate</Button>

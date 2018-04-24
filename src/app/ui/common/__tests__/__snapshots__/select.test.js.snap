@@ -34,6 +34,7 @@ exports[`snapshot default 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
   padding-left: 20px;
   padding-right: 30px;
   color: #333333;
@@ -49,6 +50,10 @@ exports[`snapshot default 1`] = `
 
 #edealer-estimator-test .c1.placeholder {
   color: #c5c5c5;
+}
+
+#edealer-estimator-test .c1:focus {
+  border-color: #c5c5c5;
 }
 
 <div
@@ -108,6 +113,7 @@ exports[`snapshot placeholder 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
   padding-left: 20px;
   padding-right: 30px;
   color: #333333;
@@ -123,6 +129,10 @@ exports[`snapshot placeholder 1`] = `
 
 #edealer-estimator-test .c1.placeholder {
   color: #c5c5c5;
+}
+
+#edealer-estimator-test .c1:focus {
+  border-color: #c5c5c5;
 }
 
 <div
@@ -189,6 +199,7 @@ exports[`snapshot value set to option text 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
   padding-left: 20px;
   padding-right: 30px;
   color: #333333;
@@ -204,6 +215,10 @@ exports[`snapshot value set to option text 1`] = `
 
 #edealer-estimator-test .c1.placeholder {
   color: #c5c5c5;
+}
+
+#edealer-estimator-test .c1:focus {
+  border-color: #c5c5c5;
 }
 
 <div
@@ -263,6 +278,7 @@ exports[`snapshot value set to option value 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
   padding-left: 20px;
   padding-right: 30px;
   color: #333333;
@@ -278,6 +294,10 @@ exports[`snapshot value set to option value 1`] = `
 
 #edealer-estimator-test .c1.placeholder {
   color: #c5c5c5;
+}
+
+#edealer-estimator-test .c1:focus {
+  border-color: #c5c5c5;
 }
 
 <div

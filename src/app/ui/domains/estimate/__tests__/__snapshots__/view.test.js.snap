@@ -97,6 +97,7 @@ exports[`snapshot default 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
   padding-left: 20px;
   padding-right: 30px;
   color: #333333;
@@ -112,6 +113,10 @@ exports[`snapshot default 1`] = `
 
 #edealer-estimator-test .c8.placeholder {
   color: #c5c5c5;
+}
+
+#edealer-estimator-test .c8:focus {
+  border-color: #c5c5c5;
 }
 
 #edealer-estimator-test .c9 {
@@ -152,6 +157,7 @@ exports[`snapshot default 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
   padding-left: 20px;
   padding-right: 45px;
   font-size: 16px;
@@ -174,6 +180,10 @@ exports[`snapshot default 1`] = `
   color: #c5c5c5;
 }
 
+#edealer-estimator-test .c10:focus {
+  border-color: #c5c5c5;
+}
+
 #edealer-estimator-test .c12 {
   font-family: proxima nova;
   display: block;
@@ -186,6 +196,7 @@ exports[`snapshot default 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
   padding-left: 20px;
   padding-right: 20px;
   font-size: 16px;
@@ -206,6 +217,10 @@ exports[`snapshot default 1`] = `
 
 #edealer-estimator-test .c12::placeholder {
   color: #c5c5c5;
+}
+
+#edealer-estimator-test .c12:focus {
+  border-color: #c5c5c5;
 }
 
 #edealer-estimator-test .c13 {

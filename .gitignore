@@ -4,3 +4,4 @@ coverage
 ._.DS_Store
 .vscode
 dist/
+yarn-error.log

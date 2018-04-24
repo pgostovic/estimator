@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`snapshot default 1`] = `
+exports[`snapshot isLong 1`] = `
 #edealer-estimator-test .c2 {
   height: 24px;
 }
@@ -302,6 +302,313 @@ exports[`snapshot default 1`] = `
   />
   <div
     className="c23"
+  />
+</div>
+`;
+
+exports[`snapshot not isLong 1`] = `
+#edealer-estimator-test .c2 {
+  height: 24px;
+}
+
+#edealer-estimator-test .c4 {
+  height: 30px;
+}
+
+#edealer-estimator-test .c7 {
+  height: 11px;
+}
+
+#edealer-estimator-test .c11 {
+  height: 25px;
+}
+
+#edealer-estimator-test .c15 {
+  height: 37px;
+}
+
+#edealer-estimator-test .c17 {
+  height: 7px;
+}
+
+#edealer-estimator-test .c22 {
+  height: 160px;
+}
+
+#edealer-estimator-test .c14 {
+  height: 10px;
+}
+
+#edealer-estimator-test .c1 {
+  background-color: #f3f3f3;
+  border-radius: 9999px;
+  width: 170px;
+  height: 25px;
+}
+
+#edealer-estimator-test .c3 {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  width: 255px;
+  height: 124px;
+}
+
+#edealer-estimator-test .c5 {
+  background-color: #f3f3f3;
+  border-radius: 9999px;
+  width: 239px;
+  height: 25px;
+}
+
+#edealer-estimator-test .c6 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 509px;
+  height: 17px;
+}
+
+#edealer-estimator-test .c8 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 519px;
+  height: 17px;
+}
+
+#edealer-estimator-test .c9 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 489px;
+  height: 17px;
+}
+
+#edealer-estimator-test .c10 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 479px;
+  height: 17px;
+}
+
+#edealer-estimator-test .c16 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 105px;
+  height: 10px;
+}
+
+#edealer-estimator-test .c18 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 505px;
+  height: 10px;
+}
+
+#edealer-estimator-test .c19 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 395px;
+  height: 10px;
+}
+
+#edealer-estimator-test .c20 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 515px;
+  height: 10px;
+}
+
+#edealer-estimator-test .c21 {
+  background-color: #f8f8f8;
+  border-radius: 9999px;
+  width: 145px;
+  height: 10px;
+}
+
+#edealer-estimator-test .c12 {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  width: 295px;
+  height: 214px;
+}
+
+#edealer-estimator-test .c13 {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  width: default;
+  height: 46px;
+}
+
+#edealer-estimator-test .c0 {
+  background-color: #fbfbfb;
+  padding: 30px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+#edealer-estimator-test .c0 .values-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#edealer-estimator-test .c0 .values-row > div:first-child {
+  margin-right: 25px;
+}
+
+#edealer-estimator-test .c0 .text-app-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#edealer-estimator-test .c0 .text-app-row .space {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+#edealer-estimator-test .c0 .text-app-row > div:last-child {
+  margin-left: 10px;
+}
+
+#edealer-estimator-test .c0 .form-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#edealer-estimator-test .c0 .form-row .form {
+  padding-left: 25px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  />
+  <div
+    className="c2"
+  />
+  <div
+    className="values-row"
+  >
+    <div
+      className="c3"
+    />
+    <div
+      className="c3"
+    />
+  </div>
+  <div
+    className="c4"
+  />
+  <div
+    className="c5"
+  />
+  <div
+    className="c4"
+  />
+  <div
+    className="c6"
+  />
+  <div
+    className="c7"
+  />
+  <div
+    className="c8"
+  />
+  <div
+    className="c7"
+  />
+  <div
+    className="c9"
+  />
+  <div
+    className="c7"
+  />
+  <div
+    className="c10"
+  />
+  <div
+    className="c11"
+  />
+  <div
+    className="form-row"
+  >
+    <div
+      className="c12"
+    />
+    <div
+      className="form"
+    >
+      <div
+        className="c13"
+      />
+      <div
+        className="c14"
+      />
+      <div
+        className="c13"
+      />
+      <div
+        className="c14"
+      />
+      <div
+        className="c13"
+      />
+      <div
+        className="c14"
+      />
+      <div
+        className="c13"
+      />
+    </div>
+  </div>
+  <div
+    className="c15"
+  />
+  <div
+    className="c16"
+  />
+  <div
+    className="c17"
+  />
+  <div
+    className="c18"
+  />
+  <div
+    className="c17"
+  />
+  <div
+    className="c19"
+  />
+  <div
+    className="c17"
+  />
+  <div
+    className="c20"
+  />
+  <div
+    className="c17"
+  />
+  <div
+    className="c20"
+  />
+  <div
+    className="c17"
+  />
+  <div
+    className="c21"
+  />
+  <div
+    className="c22"
   />
 </div>
 `;
