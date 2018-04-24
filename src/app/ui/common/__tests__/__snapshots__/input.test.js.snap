@@ -58,7 +58,9 @@ exports[`snapshot text default 1`] = `
 >
   <input
     className="c1"
+    onChange={[Function]}
     type="text"
+    value={undefined}
   />
 </div>
 `;
@@ -121,7 +123,9 @@ exports[`snapshot text with suffix 1`] = `
 >
   <input
     className="c1"
+    onChange={[Function]}
     type="text"
+    value={undefined}
   />
 </div>
 `;

@@ -650,7 +650,7 @@ exports[`snapshot default 1`] = `
         name="email"
         onChange={[Function]}
         placeholder="Email"
-        type="text"
+        type="email"
         value=""
       />
     </div>

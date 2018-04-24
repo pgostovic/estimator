@@ -49,20 +49,51 @@ const InputInner = styled.input`
   }
 `;
 
+const formatPhone = val => val.replace(/\D/g, '')
+  .split('')
+  .slice(0, 10)
+  .map((c, i) => ([3, 6].includes(i) ? `-${c}` : c))
+  .join('');
+
+const formatValue = (type, val) => {
+  if (val) {
+    switch (type) {
+      case 'tel':
+      case 'phone':
+        return formatPhone(val);
+
+      default:
+    }
+  }
+  return val;
+};
+
 const Input = props => (
   <InputOuter suffix={props.suffix}>
-    <InputInner {...props} />
+    <InputInner
+      {...props}
+      onChange={e => {
+        if (props.onChange) {
+          e.target.value = formatValue(props.type, e.target.value);
+          props.onChange(e);
+        }
+      }}
+    />
   </InputOuter>
 );
 
 Input.propTypes = {
   suffix: PropTypes.string,
   type: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
 Input.defaultProps = {
   suffix: null,
   type: 'text',
+  value: undefined,
+  onChange: undefined,
 };
 
 export default Input;

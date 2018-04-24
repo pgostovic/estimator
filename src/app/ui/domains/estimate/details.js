@@ -116,7 +116,7 @@ class Details extends React.Component {
               <Placeholder w={295} h={214} />
               <div className="form">
                 <Input name="name" placeholder="Full Name" autoComplete="name" onChange={this.onChange} value={lead.name || ''} />
-                <Input name="email" placeholder="Email" autoComplete="email" onChange={this.onChange} value={lead.email || ''} />
+                <Input type="email" name="email" placeholder="Email" autoComplete="email" onChange={this.onChange} value={lead.email || ''} />
                 <Input type="tel" name="phone" placeholder="Phone Number" autoComplete="tel tel-national" onChange={this.onChange} value={lead.phone || ''} />
                 <Button theme="orange-gradient">Send me the app</Button>
               </div>

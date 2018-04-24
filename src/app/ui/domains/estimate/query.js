@@ -92,7 +92,7 @@ export default class Query extends React.Component {
           <div>
             <V />
             <Input name="name" placeholder="Full Name" autoComplete="name" onChange={this.onLeadChange} value={lead.name || ''} />
-            <Input name="email" placeholder="Email" autoComplete="email" onChange={this.onLeadChange} value={lead.email || ''} />
+            <Input type="email" name="email" placeholder="Email" autoComplete="email" onChange={this.onLeadChange} value={lead.email || ''} />
             <Input type="tel" name="phone" placeholder="Phone Number" autoComplete="tel tel-national" onChange={this.onLeadChange} value={lead.phone || ''} />
           </div>
         }
