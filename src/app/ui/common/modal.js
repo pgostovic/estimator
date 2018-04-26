@@ -35,8 +35,6 @@ const CloseButton = styled.button`
   color: ${colorGrey};
   font-size: 46px;
   padding: 0;
-  width: 18px;
-  height: 18px;
   font-weight: ${fontWeightThin};
   outline: 0;
   cursor: pointer;
