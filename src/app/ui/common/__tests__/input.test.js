@@ -14,7 +14,7 @@ snap('snapshot text with suffix', (
   <Input type="text" suffix="Watts" />
 ));
 
-test('type=tel formatting (all numbers)', () => {
+test('type=tel formatting (10 digits)', () => {
   const onChange = jest.fn();
   const wrapper = mount((
     <Input type="tel" onChange={onChange} />
@@ -27,7 +27,20 @@ test('type=tel formatting (all numbers)', () => {
   }));
 });
 
-test('type=tel formatting (numbers and non-numbers)', () => {
+test('type=tel formatting (too many digits)', () => {
+  const onChange = jest.fn();
+  const wrapper = mount((
+    <Input type="tel" onChange={onChange} />
+  ));
+  wrapper.find('input').simulate('change', { target: { value: '416888555511111' } });
+  expect(onChange).toBeCalledWith(expect.objectContaining({
+    target: {
+      value: '416-888-5555',
+    },
+  }));
+});
+
+test('type=tel formatting (digits and non-digits)', () => {
   const onChange = jest.fn();
   const wrapper = mount((
     <Input type="tel" onChange={onChange} />
