@@ -669,7 +669,7 @@ exports[`snapshot default 1`] = `
     </div>
   </div>
   <button
-    className="c10"
+    className="calculateButton c10"
   >
     Calculate
   </button>
@@ -1249,7 +1249,7 @@ exports[`snapshot default not isLong 1`] = `
     />
   </div>
   <button
-    className="c8"
+    className="calculateButton c8"
   >
     Calculate
   </button>

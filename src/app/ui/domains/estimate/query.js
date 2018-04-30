@@ -96,7 +96,7 @@ export default class Query extends React.Component {
             <Input type="tel" name="phone" placeholder="Phone Number" autoComplete="tel tel-national" onChange={this.onLeadChange} value={lead.phone || ''} />
           </div>
         }
-        <Button theme="green">{estimateResults && 'Re'}Calculate</Button>
+        <Button className="calculateButton" theme="green">{estimateResults && 'Re'}Calculate</Button>
       </Form>
     );
   }
