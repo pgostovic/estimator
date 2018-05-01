@@ -932,7 +932,7 @@ exports[`snapshot default 1`] = `
         </button>
       </form>
       <div
-        className="c14"
+        className="empty-details c14"
       >
         <div
           className="c15"

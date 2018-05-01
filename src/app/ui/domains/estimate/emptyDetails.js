@@ -43,7 +43,7 @@ const Frame = styled.div`
 `;
 
 const EmptyDetails = ({ isLong }) => (
-  <Frame>
+  <Frame className="empty-details">
     <Placeholder rounded w={170} h={25} />
     <V px={24} />
     <div className="values-row">

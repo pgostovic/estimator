@@ -86,7 +86,7 @@ class Details extends React.Component {
     const { estimateResults, isLong, lead } = this.props;
 
     return estimateResults ? (
-      <DetailsFrame>
+      <DetailsFrame className="details">
         <H1 noTopMargin>Quick Estimate</H1>
         <V px={15} />
         <EstimateValues>

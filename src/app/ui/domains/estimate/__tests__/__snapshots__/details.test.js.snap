@@ -189,7 +189,7 @@ exports[`snapshot isLong 1`] = `
 }
 
 <div
-  className="c0"
+  className="empty-details c0"
 >
   <div
     className="c1"
@@ -488,7 +488,7 @@ exports[`snapshot not isLong 1`] = `
 }
 
 <div
-  className="c0"
+  className="empty-details c0"
 >
   <div
     className="c1"
