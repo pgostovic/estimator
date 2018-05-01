@@ -63,12 +63,13 @@ export const Route = ({ children }) => children;
 
 Route.propTypes = {
   path: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   index: PropTypes.bool,
 };
 
 Route.defaultProps = {
   index: false,
+  children: null,
 };
 
 

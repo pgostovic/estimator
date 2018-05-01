@@ -17,13 +17,12 @@ import { setLeadAction } from '../../../store/lead/actions';
 
 
 const stateConnect = ({
-  ui: { isLong },
   estimate: {
     query, makes, models, subModels, estimateResults,
   },
   lead,
 }) => ({
-  isLong, query, makes, models, subModels, estimateResults, lead,
+  query, makes, models, subModels, estimateResults, lead,
 });
 
 const dispatchConnect = dispatch => ({
@@ -49,11 +48,15 @@ class Estimate extends React.Component {
     clearModels: PropTypes.func.isRequired,
     clearSubModels: PropTypes.func.isRequired,
     fetchEstimate: PropTypes.func.isRequired,
-    isLong: PropTypes.bool.isRequired,
+    isLong: PropTypes.bool,
     query: PropTypes.objectOf(PropTypes.string).isRequired,
     makes: PropTypes.arrayOf(PropTypes.string).isRequired,
     models: PropTypes.arrayOf(PropTypes.string).isRequired,
     subModels: PropTypes.arrayOf(PropTypes.string).isRequired,
+  };
+
+  static defaultProps = {
+    isLong: false,
   };
 
   componentDidMount() {
