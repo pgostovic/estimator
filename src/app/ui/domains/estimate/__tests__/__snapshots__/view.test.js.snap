@@ -246,6 +246,10 @@ exports[`snapshot default 1`] = `
   box-shadow: inset 0 0 10px rgba(51,51,51,0.5);
 }
 
+#edealer-estimator-test .c13:disabled {
+  cursor: not-allowed;
+}
+
 #edealer-estimator-test .c6 {
   height: 10px;
 }
@@ -922,6 +926,7 @@ exports[`snapshot default 1`] = `
         </div>
         <button
           className="calculateButton c13"
+          disabled={true}
         >
           Calculate
         </button>

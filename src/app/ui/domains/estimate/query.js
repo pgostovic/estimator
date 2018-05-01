@@ -52,6 +52,20 @@ export default class Query extends React.Component {
     onLeadChange(name, value);
   }
 
+  isFormValid() {
+    const {
+      isLong,
+      query: {
+        year, make, model, trim, mileage,
+      },
+      lead: {
+        name, email, phone,
+      },
+    } = this.props;
+
+    return !!(year && make && model && trim && mileage && (isLong ? name && email && phone : true));
+  }
+
   render() {
     const {
       isLong,
@@ -96,7 +110,7 @@ export default class Query extends React.Component {
             <Input type="tel" name="phone" placeholder="Phone Number" autoComplete="tel tel-national" onChange={this.onLeadChange} value={lead.phone || ''} />
           </div>
         }
-        <Button className="calculateButton" theme="green">{estimateResults && 'Re'}Calculate</Button>
+        <Button disabled={!this.isFormValid()} className="calculateButton" theme="green">{estimateResults && 'Re'}Calculate</Button>
       </Form>
     );
   }

@@ -47,6 +47,10 @@ const Button = styled.button`
   &:active {
     box-shadow: inset 0 0 10px ${colorBlack.alpha(0.5)};
   }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 `;
 
 Button.propTypes = {
