@@ -89,11 +89,12 @@ class Select extends React.Component {
     } = this.props;
     const { changed } = this.state;
     const showPlaceholder = !changed && !!placeholder && !value;
+    const disabled = !children || !(children instanceof Array) || children.length === 0;
 
     return (
       <SelectOuter>
         <SelectInner
-          disabled={!children}
+          disabled={disabled}
           className={showPlaceholder && 'placeholder'}
           {...this.props}
           value={showPlaceholder ? 'select-ph' : undefined}
