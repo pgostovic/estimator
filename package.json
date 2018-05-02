@@ -9,7 +9,8 @@
     "analyze": "ANALYZE_BUNDLE=true webpack --config etc/webpack.js",
     "test": "jest",
     "start": "stmux -M -- [ -t \"test watch\" \"jest --watch --notify --coverage\" : -s 1/3 -t \"webpack log\" \"webpack-dev-server --hot --config etc/webpack.js\" ]",
-    "test:ui": "yarn build; testcafe chrome $FLAGS test/**"
+    "test:ui": "testcafe -b",
+    "test:uiX": "yarn build; testcafe chrome $FLAGS test/**"
   },
   "jest": {
     "globals": {
