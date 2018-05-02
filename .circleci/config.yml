@@ -41,3 +41,7 @@ jobs:
       - run:
           name: UI Tests
           command: BROWSER=chrome:headless FLAGS="-r xunit:/tmp/test-results/res.xml" yarn test:ui
+
+      - store_test_results:
+          path: /tmp/test-results
+          
