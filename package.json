@@ -9,7 +9,7 @@
     "analyze": "ANALYZE_BUNDLE=true webpack --config etc/webpack.js",
     "test": "jest",
     "start": "stmux -M -- [ -t \"test watch\" \"jest --watch --notify --coverage\" : -s 1/3 -t \"webpack log\" \"webpack-dev-server --hot --config etc/webpack.js\" ]",
-    "test:ui": "yarn build; testcafe $(if [ \"$BROWSER\" = \"\" ]; then BROWSER=chrome:headless; fi; echo $BROWSER) $FLAGS test"
+    "test:ui": "yarn build; testcafe $(if [ \"$BROWSER\" = \"\" ]; then BROWSER=chrome; fi; echo $BROWSER) $FLAGS test"
   },
   "jest": {
     "globals": {
