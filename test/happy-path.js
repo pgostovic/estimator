@@ -3,7 +3,7 @@ import { Selector } from 'testcafe';
 /* global fixture */
 
 fixture`Happy path: everything is as expected`
-  .page`http://localhost:8080/`;
+  .page`../dist/index.html`;
 
 const yearSelect = Selector('select[name=year]');
 const makeSelect = Selector('select[name=make]');

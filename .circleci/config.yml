@@ -34,4 +34,10 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-      - run: yarn test
+      - run:
+          name: Unit Tests
+          command:  yarn test
+
+      - run:
+        name: UI Tests
+        command: FLAGS="-r xunit:/tmp/test-results/res.xml" yarn test:ui
