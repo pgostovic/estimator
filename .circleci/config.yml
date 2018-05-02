@@ -36,12 +36,17 @@ jobs:
       # run tests!
       - run:
           name: Unit Tests
-          command: mkdir /tmp/test-results; FLAGS="--json --outputFile /tmp/test-results/results.json" yarn test
+          command: yarn test
+          environment:
+            FLAGS: --ci --testResultsProcessor="jest-junit"
+            JEST_JUNIT_OUTPUT: /tmp/test-results/unit.xml
 
       - run:
           name: UI Tests
-          # command: BROWSER=chrome:headless FLAGS="-r xunit:/tmp/test-results/ui/results.xml" yarn test:ui
-          command: BROWSER=chrome:headless FLAGS="-r xunit:/tmp/test-results/res.xml" yarn test:ui
+          command: yarn test:ui
+          environment:
+            BROWSER: chrome:headless
+            FLAGS: -r xunit:/tmp/test-results/res.xml
 
       - store_test_results:
           path: /tmp/test-results
