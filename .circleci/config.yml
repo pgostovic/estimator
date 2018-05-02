@@ -39,5 +39,5 @@ jobs:
           command:  yarn test
 
       - run:
-        name: UI Tests
-        command: FLAGS="-r xunit:/tmp/test-results/res.xml" yarn test:ui
+          name: UI Tests
+          command: FLAGS="-r xunit:/tmp/test-results/res.xml" yarn test:ui
