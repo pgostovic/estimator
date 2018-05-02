@@ -46,7 +46,7 @@ jobs:
           command: yarn test:ui
           environment:
             BROWSER: chrome:headless
-            FLAGS: -r xunit:/tmp/test-results/res.xml
+            FLAGS: -r xunit:/tmp/test-results/ui.xml
 
       - store_test_results:
           path: /tmp/test-results
