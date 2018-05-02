@@ -36,11 +36,11 @@ jobs:
       # run tests!
       - run:
           name: Unit Tests
-          command: FLAGS="--json --outputFile /tmp/test-results/unit-tests.json" yarn test
+          command: FLAGS="--json --outputFile /tmp/test-results/unit/results.json" yarn test
 
       - run:
           name: UI Tests
-          command: BROWSER=chrome:headless FLAGS="-r xunit:/tmp/test-results/ui-tests.xml" yarn test:ui
+          command: BROWSER=chrome:headless FLAGS="-r xunit:/tmp/test-results/ui/results.xml" yarn test:ui
 
       - store_test_results:
           path: /tmp/test-results
