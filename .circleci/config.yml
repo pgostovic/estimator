@@ -40,4 +40,4 @@ jobs:
 
       - run:
           name: UI Tests
-          command: FLAGS="-r xunit:/tmp/test-results/res.xml" yarn test:ui
+          command: BROWSER=chrome:headless FLAGS="-r xunit:/tmp/test-results/res.xml" yarn test:ui
