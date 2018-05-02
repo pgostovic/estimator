@@ -36,7 +36,7 @@ jobs:
       # run tests!
       - run:
           name: Unit Tests
-          command: FLAGS="--json --outputFile /tmp/test-results/unit/results.json" yarn test
+          command: FLAGS="--json --outputFile /tmp/test-results/results.json" yarn test
 
       - run:
           name: UI Tests
