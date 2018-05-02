@@ -1,9 +1,10 @@
 import { Selector } from 'testcafe';
+import path from 'path';
 
 /* global fixture */
 
 fixture`Happy path: everything is as expected`
-  .page`../dist/index.html`;
+  .page`${path.resolve(__dirname, '../dist/index.html')}`;
 
 const yearSelect = Selector('select[name=year]');
 const makeSelect = Selector('select[name=make]');
