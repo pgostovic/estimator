@@ -34,12 +34,12 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-      # - run:
-      #     name: Unit Tests
-      #     command: yarn test
-      #     environment:
-      #       FLAGS: --ci --testResultsProcessor=jest-junit
-      #       JEST_JUNIT_OUTPUT: /tmp/test-results/unit.xml
+      - run:
+          name: Unit Tests
+          command: yarn test
+          environment:
+            JEST_JUNIT_OUTPUT: /tmp/test-results/unit.xml
+            FLAGS: --ci --testResultsProcessor=jest-junit
 
       - run:
           name: UI Tests
