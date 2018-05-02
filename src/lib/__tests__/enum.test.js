@@ -4,7 +4,7 @@ test('array enum', () => {
   const en = makeEnum('ONE', 'TWO', 'THREE');
   expect(en.ONE).toBe('ONE');
   expect(en.TWO).toBe('TWO');
-  expect(en.THREE).toBe('THREE');
+  expect(en.THREE).toBe('THREEx');
 });
 
 test('object enum', () => {
