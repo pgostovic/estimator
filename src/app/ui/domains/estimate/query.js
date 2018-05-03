@@ -21,11 +21,14 @@ export default class Query extends React.Component {
     onQueryChange: PropTypes.func.isRequired,
     onQuerySubmit: PropTypes.func.isRequired,
     onLeadChange: PropTypes.func.isRequired,
-    query: PropTypes.objectOf(PropTypes.string).isRequired,
+    query: PropTypes.objectOf(PropTypes.shape({
+      value: PropTypes.string,
+      text: PropTypes.string,
+    })).isRequired,
     lead: PropTypes.objectOf(PropTypes.string).isRequired,
-    makes: PropTypes.arrayOf(PropTypes.string).isRequired,
-    models: PropTypes.arrayOf(PropTypes.string).isRequired,
-    subModels: PropTypes.arrayOf(PropTypes.string).isRequired,
+    makes: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
+    models: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
+    subModels: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
     estimateResults: PropTypes.shape({
       low: PropTypes.number,
       high: PropTypes.number,
@@ -39,9 +42,13 @@ export default class Query extends React.Component {
   @autobind
   onQueryChange(event) {
     const { onQueryChange } = this.props;
-    const { name, value } = event.target;
+    const {
+      name, value, selectedIndex, options,
+    } = event.target;
 
-    onQueryChange(name, value);
+    const { text } = options ? options[selectedIndex] : { text: value };
+
+    onQueryChange(name, value, text);
   }
 
   @autobind
@@ -63,7 +70,7 @@ export default class Query extends React.Component {
       },
     } = this.props;
 
-    return !!(year && make && model && trim && mileage && (isLong ? name && email && phone : true));
+    return !!(year.value && make.value && model.value && trim.value && mileage.value && (isLong ? name && email && phone : true));
   }
 
   render() {
@@ -89,19 +96,19 @@ export default class Query extends React.Component {
           Receive a close estimate of your trade value using real Canadian auction data.
         </P>
         <V />
-        <Select name="year" placeholder="Year" onChange={this.onQueryChange} value={query.year}>
+        <Select name="year" placeholder="Year" onChange={this.onQueryChange} value={query.year.value}>
           {pastHundredYears.map(year => <option key={year}>{year}</option>)}
         </Select>
-        <Select name="make" placeholder="Make" onChange={this.onQueryChange} value={query.make}>
-          {makes.map(make => <option key={make}>{make}</option>)}
+        <Select name="make" placeholder="Make" onChange={this.onQueryChange} value={query.make.value}>
+          {makes.map(make => <option key={make.id} value={make.id}>{make.name}</option>)}
         </Select>
-        <Select name="model" placeholder="Model" onChange={this.onQueryChange} value={query.model}>
-          {models.map(model => <option key={model}>{model}</option>)}
+        <Select name="model" placeholder="Model" onChange={this.onQueryChange} value={query.model.value}>
+          {models.map(model => <option key={model.id} value={model.id}>{model.name}</option>)}
         </Select>
-        <Select name="trim" placeholder="Trim" onChange={this.onQueryChange} value={query.trim}>
-          {subModels.map(subModel => <option key={subModel}>{subModel}</option>)}
+        <Select name="trim" placeholder="Trim" onChange={this.onQueryChange} value={query.trim.value}>
+          {subModels.map(subModel => <option key={subModel.id} value={subModel.id}>{subModel.name}</option>)}
         </Select>
-        <Input type="number" min="0" name="mileage" placeholder="Mileage" suffix="KM" onChange={this.onQueryChange} value={query.mileage || ''} />
+        <Input type="number" min="0" name="mileage" placeholder="Mileage" suffix="KM" onChange={this.onQueryChange} value={query.mileage.value || ''} />
         {isLong &&
           <div>
             <V />

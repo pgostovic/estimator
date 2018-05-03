@@ -2,13 +2,21 @@ import React from 'react';
 import snap from '../../../../../lib/test-utils/snap';
 import Query from '../query';
 
+const query = {
+  year: {},
+  make: {},
+  model: {},
+  trim: {},
+  mileage: {},
+};
+
 snap('snapshot default', (
   <Query
     isLong
     onQueryChange={jest.fn()}
     onLeadChange={jest.fn()}
     onQuerySubmit={jest.fn()}
-    query={{}}
+    query={query}
     lead={{}}
     makes={[]}
     models={[]}
@@ -22,7 +30,7 @@ snap('snapshot default not isLong', (
     onQueryChange={jest.fn()}
     onLeadChange={jest.fn()}
     onQuerySubmit={jest.fn()}
-    query={{}}
+    query={query}
     lead={{}}
     makes={[]}
     models={[]}

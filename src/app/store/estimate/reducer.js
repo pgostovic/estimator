@@ -3,7 +3,13 @@ import { types } from './actions';
 import './async';
 
 const defaultState = {
-  query: {},
+  query: {
+    year: {},
+    make: {},
+    model: {},
+    trim: {},
+    mileage: {},
+  },
   makes: [],
   makesError: null,
   models: [],
@@ -23,8 +29,8 @@ const {
 } = types;
 
 export default makeReducer({
-  [SET_ESTIMATE_QUERY]: (state, action) => (
-    { ...state, query: { ...state.query, [action.name]: action.value } }
+  [SET_ESTIMATE_QUERY]: (state, { name, value, text }) => (
+    { ...state, query: { ...state.query, [name]: { value, text } } }
   ),
 
   [MAKES_FETCHED]: (state, { makes }) => ({ ...state, makes }),

@@ -26,7 +26,7 @@ const stateConnect = ({
 });
 
 const dispatchConnect = dispatch => ({
-  setQuery: (name, value) => dispatch(setQueryAction(name, value)),
+  setQuery: (name, value, text) => dispatch(setQueryAction(name, value, text)),
   setLead: (name, value) => dispatch(setLeadAction(name, value)),
   fetchMakes: () => dispatch(fetchMakesAction()),
   fetchModels: make => dispatch(fetchModelsAction(make)),
@@ -49,10 +49,13 @@ class Estimate extends React.Component {
     clearSubModels: PropTypes.func.isRequired,
     fetchEstimate: PropTypes.func.isRequired,
     isLong: PropTypes.bool,
-    query: PropTypes.objectOf(PropTypes.string).isRequired,
-    makes: PropTypes.arrayOf(PropTypes.string).isRequired,
-    models: PropTypes.arrayOf(PropTypes.string).isRequired,
-    subModels: PropTypes.arrayOf(PropTypes.string).isRequired,
+    query: PropTypes.objectOf(PropTypes.shape({
+      value: PropTypes.string,
+      text: PropTypes.string,
+    })).isRequired,
+    makes: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
+    models: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
+    subModels: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
   };
 
   static defaultProps = {
@@ -73,7 +76,7 @@ class Estimate extends React.Component {
   }
 
   @autobind
-  onQueryChange(name, value) {
+  onQueryChange(name, value, text) {
     const {
       query: { make },
       setQuery,
@@ -83,7 +86,7 @@ class Estimate extends React.Component {
       clearSubModels,
     } = this.props;
 
-    setQuery(name, value);
+    setQuery(name, value, text);
 
     /**
      * Need to unset some query values in certain situations. For example,
@@ -91,13 +94,13 @@ class Estimate extends React.Component {
      * then the selected model and trim are no longer relevant.
      */
     if (name === 'make') {
-      fetchModels(value);
+      fetchModels(text);
       setQuery('model', undefined);
       setQuery('trim', undefined);
       clearModels();
       clearSubModels();
     } else if (name === 'model') {
-      fetchSubModels(make, value);
+      fetchSubModels(make.text, text);
       setQuery('trim', undefined);
       clearSubModels();
     }

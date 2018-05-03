@@ -8,7 +8,9 @@ export const types = makeEnum(
   'FETCH_ESTIMATE', 'ESTIMATE_FETCHED', 'FETCH_ESTIMATE_ERROR', 'CLEAR_ESTIMATE',
 );
 
-export const setQueryAction = (name, value) => ({ type: types.SET_ESTIMATE_QUERY, name, value });
+export const setQueryAction = (name, value, text) => ({
+  type: types.SET_ESTIMATE_QUERY, name, value, text,
+});
 
 export const fetchMakesAction = () => ({ type: types.FETCH_MAKES });
 export const makesFetchedAction = makes => ({ type: types.MAKES_FETCHED, makes });
