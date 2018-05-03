@@ -6,6 +6,7 @@ export const types = makeEnum(
   'FETCH_MODELS', 'MODELS_FETCHED', 'FETCH_MODELS_ERROR', 'CLEAR_MODELS',
   'FETCH_SUBMODELS', 'SUBMODELS_FETCHED', 'FETCH_SUBMODELS_ERROR', 'CLEAR_SUBMODELS',
   'FETCH_ESTIMATE', 'ESTIMATE_FETCHED', 'FETCH_ESTIMATE_ERROR', 'CLEAR_ESTIMATE',
+  'CREATE_TRADE_IN', 'TRADE_IN_CREATED', 'CREATE_TRADE_IN_ERROR',
 );
 
 export const setQueryAction = (name, value, text) => ({
@@ -32,3 +33,9 @@ export const fetchEstimateAction = (year, make, model, trim, mileage) => ({
 export const estimateFetchedAction = estimateResults => ({ type: types.ESTIMATE_FETCHED, estimateResults });
 export const fetchEstimateErrorAction = error => ({ type: types.FETCH_ESTIMATE_ERROR, error });
 export const clearEstimateAction = () => ({ type: types.CLEAR_ESTIMATE });
+
+export const createTradeInAction = (rooftopId, name, email, phoneNumber, year, makeId, modelId, subModelId, mileageKms) => ({
+  type: types.CREATE_TRADE_IN, rooftopId, name, email, phoneNumber, year, makeId, modelId, subModelId, mileageKms,
+});
+export const tradeInCreatedAction = tradeInResults => ({ type: types.TRADE_IN_CREATED, tradeInResults });
+export const createTradeInErrorAction = error => ({ type: types.CREATE_TRADE_IN_ERROR, error });

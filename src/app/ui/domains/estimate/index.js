@@ -12,6 +12,7 @@ import {
   clearModelsAction,
   clearSubModelsAction,
   fetchEstimateAction,
+  createTradeInAction,
 } from '../../../store/estimate/actions';
 import { setLeadAction } from '../../../store/lead/actions';
 
@@ -34,6 +35,7 @@ const dispatchConnect = dispatch => ({
   clearModels: () => dispatch(clearModelsAction()),
   clearSubModels: () => dispatch(clearSubModelsAction()),
   fetchEstimate: (year, make, model, trim, mileage) => dispatch(fetchEstimateAction(year, make, model, trim, mileage)),
+  createTradeIn: (rooftopId, name, email, phoneNumber, year, makeId, modelId, subModelId, mileageKms) => dispatch(createTradeInAction(rooftopId, name, email, phoneNumber, year, makeId, modelId, subModelId, mileageKms)),
 });
 
 @connect(stateConnect, dispatchConnect)
@@ -48,11 +50,13 @@ class Estimate extends React.Component {
     clearModels: PropTypes.func.isRequired,
     clearSubModels: PropTypes.func.isRequired,
     fetchEstimate: PropTypes.func.isRequired,
+    createTradeIn: PropTypes.func.isRequired,
     isLong: PropTypes.bool,
     query: PropTypes.objectOf(PropTypes.shape({
       value: PropTypes.string,
       text: PropTypes.string,
     })).isRequired,
+    lead: PropTypes.objectOf(PropTypes.string).isRequired,
     makes: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
     models: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
     subModels: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
@@ -118,12 +122,30 @@ class Estimate extends React.Component {
     fetchEstimate(year, make, model, trim, mileage);
   }
 
+  @autobind
+  createTradeIn() {
+    const {
+      query: {
+        year, make, model, trim, mileage,
+      },
+      lead: {
+        name, email, phone, phoneOverride,
+      },
+      createTradeIn,
+    } = this.props;
+
+    const rooftopId = 'f4f014b8-ac8e-4ed5-ad98-9b62ef6f1775';
+
+    createTradeIn(rooftopId, name, email, phoneOverride || phone, year.value, make.value, model.value, trim.value, mileage.value);
+  }
+
   render() {
     return (
       <View
         onQueryChange={this.onQueryChange}
         onQuerySubmit={this.onQuerySubmit}
         onLeadChange={this.onLeadChange}
+        onDone={this.createTradeIn}
         {...this.props}
       />
     );

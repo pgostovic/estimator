@@ -62,6 +62,7 @@ const FinePrint = styled(P)`
 class Details extends React.Component {
   static propTypes = {
     onLeadChange: PropTypes.func.isRequired,
+    onDone: PropTypes.func.isRequired,
     isLong: PropTypes.bool.isRequired,
     lead: PropTypes.objectOf(PropTypes.string).isRequired,
     estimateResults: PropTypes.shape({
@@ -83,7 +84,9 @@ class Details extends React.Component {
   }
 
   render() {
-    const { estimateResults, isLong, lead } = this.props;
+    const {
+      estimateResults, isLong, lead, onDone,
+    } = this.props;
 
     return estimateResults ? (
       <DetailsFrame className="details">
@@ -118,7 +121,7 @@ class Details extends React.Component {
                 <Input name="name" placeholder="Full Name" autoComplete="name" onChange={this.onChange} value={lead.name || ''} />
                 <Input type="email" name="email" placeholder="Email" autoComplete="email" onChange={this.onChange} value={lead.email || ''} />
                 <Input type="tel" name="phone" placeholder="Phone Number" autoComplete="tel tel-national" onChange={this.onChange} value={lead.phone || ''} />
-                <Button theme="orange-gradient">Send me the app</Button>
+                <Button theme="orange-gradient" onClick={onDone}>Send me the app</Button>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import { on, dispatch } from '../../../lib/redux-util/asyncEvents';
 
-import { getEstimate } from '../../api/estimate';
+import { getEstimate, createTradeIn } from '../../api/estimate';
 import { getMakes, getModels, getSubModels } from '../../api/inventory';
 import {
   types,
@@ -12,6 +12,8 @@ import {
   fetchSubModelsErrorAction,
   estimateFetchedAction,
   fetchEstimateErrorAction,
+  tradeInCreatedAction,
+  createTradeInErrorAction,
 } from './actions';
 
 const {
@@ -19,6 +21,7 @@ const {
   FETCH_MODELS,
   FETCH_SUBMODELS,
   FETCH_ESTIMATE,
+  CREATE_TRADE_IN,
 } = types;
 
 on(FETCH_MAKES, async () => {
@@ -54,5 +57,16 @@ on(FETCH_ESTIMATE, async () => {
     dispatch(estimateFetchedAction(estimate));
   } catch (error) {
     dispatch(fetchEstimateErrorAction(error.toString()));
+  }
+});
+
+on(CREATE_TRADE_IN, async ({
+  rooftopId, name, email, phoneNumber, year, makeId, modelId, subModelId, mileageKms,
+}) => {
+  try {
+    const tradeInResults = await createTradeIn(rooftopId, name, email, phoneNumber, year, makeId, modelId, subModelId, mileageKms);
+    dispatch(tradeInCreatedAction(tradeInResults));
+  } catch (error) {
+    dispatch(createTradeInErrorAction(error.toString()));
   }
 });

@@ -9,7 +9,7 @@ import { Router, Route, router } from '../lib/router';
 import './index.html';
 
 window.eblock = {
-  show(isLong) {
+  show(rooftopId, isLong) {
     router().push(isLong ? '/estimate-long' : '/estimate');
   },
 

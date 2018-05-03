@@ -18,6 +18,8 @@ const defaultState = {
   subModelsError: null,
   estimateResults: null,
   estimateResultsError: null,
+  tradeInResults: null,
+  createTradeInError: null,
 };
 
 const {
@@ -26,6 +28,7 @@ const {
   MODELS_FETCHED, FETCH_MODELS_ERROR, CLEAR_MODELS,
   SUBMODELS_FETCHED, FETCH_SUBMODELS_ERROR, CLEAR_SUBMODELS,
   ESTIMATE_FETCHED, FETCH_ESTIMATE_ERROR, CLEAR_ESTIMATE,
+  TRADE_IN_CREATED, CREATE_TRADE_IN_ERROR,
 } = types;
 
 export default makeReducer({
@@ -48,4 +51,6 @@ export default makeReducer({
   [FETCH_ESTIMATE_ERROR]: (state, { error }) => ({ ...state, estimateResultsError: error }),
   [CLEAR_ESTIMATE]: state => ({ ...state, estimateResults: null, estimateResultsError: null }),
 
+  [TRADE_IN_CREATED]: (state, { tradeInResults }) => ({ ...state, tradeInResults }),
+  [CREATE_TRADE_IN_ERROR]: (state, { error }) => ({ ...state, createTradeInError: error }),
 }, defaultState);

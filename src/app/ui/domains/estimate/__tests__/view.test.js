@@ -17,6 +17,7 @@ snap('snapshot default', (
     onQueryChange={jest.fn()}
     onLeadChange={jest.fn()}
     onQuerySubmit={jest.fn()}
+    onDone={jest.fn()}
     query={query}
     lead={{}}
     makes={[]}

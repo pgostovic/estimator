@@ -3,9 +3,9 @@ import snap from '../../../../../lib/test-utils/snap';
 import Details from '../details';
 
 snap('snapshot isLong', (
-  <Details isLong lead={{}} onLeadChange={jest.fn()} />
+  <Details isLong lead={{}} onLeadChange={jest.fn()} onDone={jest.fn()} />
 ));
 
 snap('snapshot not isLong', (
-  <Details isLong={false} lead={{}} onLeadChange={jest.fn()} />
+  <Details isLong={false} lead={{}} onLeadChange={jest.fn()} onDone={jest.fn()} />
 ));

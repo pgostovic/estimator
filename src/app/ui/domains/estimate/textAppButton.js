@@ -60,6 +60,7 @@ class TextAppButton extends React.Component {
   static propTypes = {
     lead: PropTypes.objectOf(PropTypes.string).isRequired,
     onLeadChange: PropTypes.func.isRequired,
+    onDone: PropTypes.func.isRequired,
   };
 
   state = { showForm: false };
@@ -73,14 +74,14 @@ class TextAppButton extends React.Component {
 
   render() {
     const { showForm } = this.state;
-    const { lead: { phone, phoneOverride }, onLeadChange } = this.props;
+    const { lead: { phone, phoneOverride }, onLeadChange, onDone } = this.props;
     const phoneVal = phoneOverride === null ? phone : phoneOverride || '';
 
     return (
       <span>
         {showForm ?
           <Form onSubmit={this.confirm}>
-            <Button w={205} theme="orange-gradient">
+            <Button w={205} theme="orange-gradient" onClick={onDone}>
               Confirm
             </Button>
             <div>

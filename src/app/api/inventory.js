@@ -33,6 +33,11 @@ export const getSubModels = (make, model) => graphql(`{
             id
             name
           }
+          trims {
+            id
+            name
+            year
+          }
         }
       }
     }
