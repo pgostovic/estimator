@@ -12,6 +12,7 @@
     "test:ui": "yarn build; testcafe $(if [ \"$BROWSER\" = \"\" ]; then BROWSER=safari; fi; echo $BROWSER) $FLAGS test"
   },
   "jest": {
+    "testURL": "https://edealer-estimator.com/",
     "globals": {
       "__APP__": {
         "root": "edealer-estimator-test"
