@@ -4,6 +4,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const app = require('./app.json');
 
 const analyzeBundle = process.env.ANALYZE_BUNDLE === 'true';
+const hostOverride = process.env.HOST;
 const nodeEnv = process.env.NODE_ENV || 'development';
 
 if (!['development', 'stage', 'production'].includes(nodeEnv)) {
@@ -11,6 +12,8 @@ if (!['development', 'stage', 'production'].includes(nodeEnv)) {
 }
 
 const appConfig = app[nodeEnv];
+
+const host = hostOverride === undefined ? appConfig.host : hostOverride;
 
 const baseConfig = {
   mode: appConfig.mode,
@@ -54,7 +57,7 @@ const baseConfig = {
             options: {
               name: '[name]-[hash:8].[ext]',
               outputPath: 'fonts/',
-              publicPath: `${appConfig.host}/fonts`,
+              publicPath: `${host}/fonts`,
             },
           },
         ],
@@ -72,7 +75,7 @@ const baseConfig = {
             loader: 'string-replace-loader',
             options: {
               search: '__API_URL__',
-              replace: `${appConfig.host}/api.js`,
+              replace: `${host}api.js`,
             },
           },
         ],
