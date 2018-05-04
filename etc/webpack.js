@@ -17,10 +17,11 @@ const baseConfig = {
   devtool: appConfig.devtool,
   devServer: {
     contentBase: 'dist',
+    headers: { 'Access-Control-Allow-Origin': '*' },
   },
   entry: ['babel-polyfill', path.resolve(__dirname, '../src/main.js')],
   output: {
-    filename: 'bundle.js',
+    filename: 'api.js',
     path: path.resolve(__dirname, '../dist'),
   },
   plugins: [
@@ -53,6 +54,7 @@ const baseConfig = {
             options: {
               name: '[name]-[hash:8].[ext]',
               outputPath: 'fonts/',
+              publicPath: `${appConfig.host}/fonts`,
             },
           },
         ],
@@ -64,6 +66,13 @@ const baseConfig = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
+            },
+          },
+          {
+            loader: 'string-replace-loader',
+            options: {
+              search: '__API_URL__',
+              replace: `${appConfig.host}/api.js`,
             },
           },
         ],

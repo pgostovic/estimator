@@ -3,16 +3,19 @@
     "mode": "development",
     "root": "edealer-estimator-development",
     "graphql": "http://graph.stg.getedealer.com/graphql",
-    "devtool": "eval-source-map"
+    "devtool": "eval-source-map",
+    "host": "http://localhost:8081"
   },
   "stage": {
     "mode": "development",
     "root": "edealer-estimator-stage",
-    "graphql": "http://graph.stg.getedealer.com/graphql"
+    "graphql": "http://graph.stg.getedealer.com/graphql",
+    "host": "http://localhost:8081"
   },
   "production": {
     "mode": "production",
     "root": "edealer-estimator-production",
-    "graphql": "https://graph.getedealer.com/graphql"
+    "graphql": "https://graph.getedealer.com/graphql",
+    "host": "http://localhost:8081"
   }
 }
