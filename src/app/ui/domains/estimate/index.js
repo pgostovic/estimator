@@ -41,7 +41,21 @@ const dispatchConnect = dispatch => ({
 @connect(stateConnect, dispatchConnect)
 class Estimate extends React.Component {
   static propTypes = {
+    rooftopId: PropTypes.string.isRequired,
+    isLong: PropTypes.bool,
     onClose: PropTypes.func.isRequired,
+
+    // connected state
+    query: PropTypes.objectOf(PropTypes.shape({
+      value: PropTypes.string,
+      text: PropTypes.string,
+    })).isRequired,
+    lead: PropTypes.objectOf(PropTypes.string).isRequired,
+    makes: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
+    models: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
+    subModels: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
+
+    // connected dispatch
     setQuery: PropTypes.func.isRequired,
     setLead: PropTypes.func.isRequired,
     fetchMakes: PropTypes.func.isRequired,
@@ -51,15 +65,6 @@ class Estimate extends React.Component {
     clearSubModels: PropTypes.func.isRequired,
     fetchEstimate: PropTypes.func.isRequired,
     createTradeIn: PropTypes.func.isRequired,
-    isLong: PropTypes.bool,
-    query: PropTypes.objectOf(PropTypes.shape({
-      value: PropTypes.string,
-      text: PropTypes.string,
-    })).isRequired,
-    lead: PropTypes.objectOf(PropTypes.string).isRequired,
-    makes: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
-    models: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
-    subModels: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
   };
 
   static defaultProps = {
@@ -125,6 +130,7 @@ class Estimate extends React.Component {
   @autobind
   createTradeIn() {
     const {
+      rooftopId,
       query: {
         year, make, model, trim, mileage,
       },
@@ -133,8 +139,6 @@ class Estimate extends React.Component {
       },
       createTradeIn,
     } = this.props;
-
-    const rooftopId = 'f4f014b8-ac8e-4ed5-ad98-9b62ef6f1775';
 
     createTradeIn(rooftopId, name, email, phoneOverride || phone, year.value, make.value, model.value, trim.value, mileage.value);
   }
