@@ -1,20 +1,20 @@
 {
   "development": {
     "mode": "development",
-    "root": "edealer-estimator-development",
+    "root": "edealer-guaranteed-trade-development",
     "graphql": "http://graph.stg.getedealer.com/graphql",
     "devtool": "eval-source-map",
     "host": "http://localhost:8081/"
   },
   "stage": {
     "mode": "development",
-    "root": "edealer-estimator-stage",
+    "root": "edealer-guaranteed-trade-stage",
     "graphql": "http://graph.stg.getedealer.com/graphql",
     "host": "http://localhost:8081/"
   },
   "production": {
     "mode": "production",
-    "root": "edealer-estimator-production",
+    "root": "edealer-guaranteed-trade",
     "graphql": "https://graph.getedealer.com/graphql",
     "host": "http://localhost:8081/"
   }
