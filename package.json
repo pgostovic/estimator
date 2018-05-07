@@ -1,6 +1,7 @@
 {
   "name": "edealer-guaranteed-trade-web",
   "version": "0.1.0",
+  "engines" : { "node" : ">=8" },
   "license": "UNLICENSED",
   "scripts": {
     "clean": "rimraf dist coverage",
