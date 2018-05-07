@@ -63,6 +63,19 @@ const baseConfig = {
         ],
       },
       {
+        test: /\.(png)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name]-[hash:8].[ext]',
+              outputPath: 'images/',
+              publicPath: `${host}/images`,
+            },
+          },
+        ],
+      },
+      {
         test: /index.html$/,
         use: [
           {

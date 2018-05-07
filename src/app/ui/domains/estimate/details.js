@@ -15,6 +15,7 @@ import EstimateValue from './estimateValue';
 import EmptyDetails from './emptyDetails';
 import AppleLogo from './apple.svg';
 import AndroidLogo from './android.svg';
+import videoPhLongImg from './video-ph-long.png';
 import { colorOffWhite, paddingFrame, fontSizeFine } from '../../style/variables';
 
 const DetailsFrame = styled.div`
@@ -51,6 +52,15 @@ const DetailsFrame = styled.div`
 const EstimateValues = styled.div`
   display: flex;
   flex-direction: row;
+`;
+
+const VideoPHLong = styled.div`
+  background-image: url(${videoPhLongImg});
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  border-radius: 5px;
+  overflow: hidden;
 `;
 
 const FinePrint = styled(P)`
@@ -110,7 +120,7 @@ class Details extends React.Component {
               <Button theme="black" w={46} h={46}><AndroidLogo /></Button>
             </div>
             <V px={41} />
-            <Placeholder h={450} />
+            <VideoPHLong />
           </div>
           :
           <div>
