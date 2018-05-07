@@ -8,7 +8,7 @@
     "build": "webpack --config etc/webpack.js",
     "analyze": "ANALYZE_BUNDLE=true webpack --config etc/webpack.js",
     "test": "jest $FLAGS",
-    "start": "stmux -M -- [ -t \"test watch\" \"jest --watch --notify --coverage\" : -s 1/3 [ -t \"webpack log (host page)\" \"webpack-dev-server --port 8080 --hot --config etc/webpack.js\" .. -t \"webpack log (api server)\" \"webpack-dev-server --port 8081 --hot --config etc/webpack.js\" ] ]",
+    "start": "stmux -M -- [ -t \"test watch\" \"jest --watch --notify --coverage\" : -s 1/3 [ -t \"webpack log (host page 8080)\" \"webpack-dev-server --port 8080 --hot --config etc/webpack.js\" .. -t \"webpack log (api server 8081)\" \"webpack-dev-server --port 8081 --hot --config etc/webpack.js\" ] ]",
     "test:ui": "HOST= yarn build; testcafe $(if [ \"$BROWSER\" = \"\" ]; then BROWSER=safari; fi; echo $BROWSER) $FLAGS test"
   },
   "jest": {

@@ -15,15 +15,16 @@ import {
   createTradeInAction,
 } from '../../../store/estimate/actions';
 import { setLeadAction } from '../../../store/lead/actions';
+import { router } from '../../../../lib/router';
 
 
 const stateConnect = ({
   estimate: {
-    query, makes, models, subModels, estimateResults,
+    query, makes, models, subModels, estimateResults, tradeInResults,
   },
   lead,
 }) => ({
-  query, makes, models, subModels, estimateResults, lead,
+  query, makes, models, subModels, estimateResults, lead, done: !!tradeInResults,
 });
 
 const dispatchConnect = dispatch => ({
@@ -54,6 +55,7 @@ class Estimate extends React.Component {
     makes: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
     models: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
     subModels: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
+    done: PropTypes.bool.isRequired,
 
     // connected dispatch
     setQuery: PropTypes.func.isRequired,
@@ -75,6 +77,16 @@ class Estimate extends React.Component {
     const { fetchMakes } = this.props;
 
     fetchMakes();
+  }
+
+  shouldComponentUpdate(nextProps) {
+    const { done } = nextProps;
+
+    if (done) {
+      router().push('/summary');
+      return false;
+    }
+    return true;
   }
 
   @autobind
