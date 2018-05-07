@@ -20,7 +20,7 @@
     },
     "transform": {
       "\\.jsx?$": "babel-jest",
-      "\\.svg$": "<rootDir>/src/lib/test-utils/benignTransform.js"
+      "\\.(svg|png)$": "<rootDir>/src/lib/test-utils/benignTransform.js"
     }
   },
   "dependencies": {
