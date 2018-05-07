@@ -60,3 +60,30 @@ are pushed to the repo.
 ### Contiuous Intengration (CI)
 
 CircleCI is being used for Contiuous Intengration.
+
+## Building
+
+To create deployable static files:
+
+    yarn dist
+
+This will generate `api.js` and a few static assets (fonts, images). By default
+the files will be generated with development in mind -- i.e. with debugging
+symbols, references to staging backend, etc. For a production build:
+
+    NODE_ENV=production yarn dist
+
+## Integration
+
+On a 3rd party page, import the api.js file as follows:
+
+    <script src="http://edealer.ca/edgt/api.js"></script>
+
+To display short form (i.e. no lead info) of the EDealer Guaranteed Trade UI,
+call:
+
+    edgt.show('[ROOF_TOP_ID]');
+
+For the long form (i.e. with lead info), call:
+
+    edgt.show('[ROOF_TOP_ID]', true);
