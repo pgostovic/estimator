@@ -17,6 +17,12 @@ Start the development server:
 
 Point your browser to [localhost:8080](http://localhost:8080).
 
+To stop the development server:
+
+    ctrl-a k
+
+Note: fully release ctrl-a before hitting k.
+
 ## Development
 
 When you start the development server, your terminal will be split into three
