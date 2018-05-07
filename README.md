@@ -75,12 +75,12 @@ symbols, references to staging backend, etc. For a production build:
 
 ## Integration
 
-On a 3rd party page, import the api.js file as follows:
+On a 3rd party web page, import the `api.js` file as follows:
 
     <script src="http://edealer.ca/edgt/api.js"></script>
 
-To display short form (i.e. no lead info) of the EDealer Guaranteed Trade UI,
-call:
+To display the short form (i.e. no lead info) of the EDealer Guaranteed Trade
+UI, call:
 
     edgt.show('[ROOF_TOP_ID]');
 
