@@ -7,8 +7,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
 
-const eblockRoot = window.document.createElement('div');
-eblockRoot.id = __APP__.root;
-window.document.body.appendChild(eblockRoot);
+const edgtRoot = window.document.createElement('div');
+edgtRoot.id = __APP__.root;
+window.document.body.appendChild(edgtRoot);
 
-ReactDOM.render(<App />, eblockRoot);
+ReactDOM.render(<App />, edgtRoot);

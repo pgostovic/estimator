@@ -9,10 +9,9 @@ import { Router, Route, router } from '../lib/router';
 
 import './index.html';
 
-window.eblock = {
+window.edgt = {
   show(rooftopId, isLong = false) {
     router().push(`/estimate/${rooftopId}?isLong=${isLong}`);
-    // router().push('/summary');
   },
 
   hide() {
@@ -26,11 +25,11 @@ const App = () => (
       <Route
         path="/estimate/:rooftopId"
         render={({ rooftopId, params: { isLong } }) => (
-          <Estimate rooftopId={rooftopId} isLong={isLong === 'true'} onClose={window.eblock.hide} />
+          <Estimate rooftopId={rooftopId} isLong={isLong === 'true'} onClose={window.edgt.hide} />
         )}
       />
       <Route path="/summary">
-        <Summary onClose={window.eblock.hide} />
+        <Summary onClose={window.edgt.hide} />
       </Route>
     </Router>
   </Base>
